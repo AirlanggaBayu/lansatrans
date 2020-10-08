@@ -10,11 +10,11 @@
 			<th>No</th>
 			<th>Pelanggan</th>
 			<th>Kelas</th>
-			<th>JumlahKursi</th>
-            <th>TanggalPesan</th>
-            <th>TanggalBerangkat</th>
-            <th>TanggalPulang</th>
-            <th>AlamatPenjemputan</th>
+			<th>Jumlah Kursi</th>
+            <th>Tanggal Pesan</th>
+            <th>Tanggal Berangkat</th>
+            <th>Tanggal Pulang</th>
+            <th>Alamat Penjemputan</th>
             <th>Rute</th>
 		</tr>
 		<?php 

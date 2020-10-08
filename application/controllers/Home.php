@@ -10,5 +10,7 @@
             $this->load->view('admin');
             $this->load->view('template/footer');
         }
+        
+      
     }
 ?>

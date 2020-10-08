@@ -10,10 +10,10 @@ class Pemesanan extends CI_Controller{
 
 	function index(){
 		$data['pemesanan'] = $this->m_data->tampil_data()->result();
-		$this->load->view('template/header');
-		$this->load->view('template/sidebar');
+		$this->load->view('template_admin/header');
+		$this->load->view('template_admin/sidebar');
 		$this->load->view('v_tampil',$data);
-		$this->load->view('template/footer');
+		$this->load->view('template_admin/footer');
 	}
 }
 ?>

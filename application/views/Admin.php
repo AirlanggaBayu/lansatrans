@@ -55,7 +55,7 @@
           </button>
         </div>
         <div class="modal-body">
-        <form action="<?php echo base_url('admin/tambah_data'); ?>" method="post">
+        <form action="<?php echo base_url('admin/admin/tambah_data'); ?>" method="post">
             <h6>Nama Admin</h6>
             <input type="text" class="form-control form-control-user" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="Masukkan Nama Admin Baru" name="nama_admin">
             <h6 class="mt-2">Password</h6>
@@ -85,7 +85,7 @@
           </button>
         </div>
         <div class="modal-body">
-        <form action="<?php echo base_url('admin/edit_data/'.$a->id_admin); ?>" method="post">
+        <form action="<?php echo base_url('admin/admin/edit_data/'.$a->id_admin); ?>" method="post">
         <input type="text" readonly value="<?=$a->id_admin ?>" name="id_admin" class="form-control">
             <h6>Nama Admin</h6>
             <input type="text" class="form-control form-control-user" id="exampleInputEmail" 
@@ -117,7 +117,7 @@
         </div>
         <div class="modal-body">
         <h6>Apakah anda <strong>Yakin</strong> ingin menghapus data ini?</h6>
-        <form action="<?php echo base_url('admin/hapus_data/'.$a->id_admin); ?>" method="post">
+        <form action="<?php echo base_url('admin/admin/hapus_data/'.$a->id_admin); ?>" method="post">
           <input type="hidden" readonly value="<?=$a->id_admin ?>" name="id_admin" class="form-control">
         <div class="modal-footer ">
           <button class="btn btn-primary" type="button" data-dismiss="modal">Cancel</button>

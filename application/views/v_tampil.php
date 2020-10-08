@@ -19,19 +19,18 @@
 		</tr>
 		<?php 
 		$no = 1;
-		foreach($user as $u){ 
+		foreach($pemesanan as $p){ 
 		?>
 		<tr>
 			<td><?php echo $no++ ?></td>
-			<td><?php echo $u->pelanggan ?></td>
-			<td><?php echo $u->kelas ?></td>
-            <td><?php echo $u->jumlahkursi ?></td>
-            <td><?php echo $u->tanggalpesan ?></td>
-			<td><?php echo $u->tanggalberangkat ?></td>
-            <td><?php echo $u->tanggalpulang ?></td>
-            <td><?php echo $u->alamatpenjemputan ?></td>
-            <td><?php echo $u->rute ?></td>
-            
+			<td><?php echo $p->pelanggan ?></td>
+			<td><?php echo $p->kelas ?></td>
+            <td><?php echo $p->jumlahkursi ?></td>
+            <td><?php echo $p->tanggalpesan ?></td>
+			<td><?php echo $p->tanggalberangkat ?></td>
+            <td><?php echo $p->tanggalpulang ?></td>
+            <td><?php echo $p->alamatpenjemputan ?></td>
+            <td><?php echo $p->rute ?></td>
 			
 		</tr>
 		<?php } ?>

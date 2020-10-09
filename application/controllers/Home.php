@@ -9,8 +9,8 @@
             $this->load->view('template/sidebar');
             $this->load->view('admin');
             $this->load->view('template/footer');
+            
         }
         
       
     }
-?>

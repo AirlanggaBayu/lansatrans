@@ -4,6 +4,23 @@
 <!-- Page Heading -->
 <h1 class="h3 mb-2 text-gray-800">Data Admin</h1>
 
+<!-- Alert -->
+<?php if($this->session->has_userdata('tambah')){?>
+<!-- Data berhasil ditambahkan -->
+<div class="alert alert-success" role="alert">
+  <?= $this->session->flashdata('tambah');?>
+</div>
+<?php }elseif($this->session->has_userdata('edit')){?>
+<!-- Data berhasil diubah -->
+<div class="alert alert-success" role="alert">
+  <?= $this->session->flashdata('edit');?>
+</div>
+<?php }elseif($this->session->has_userdata('hapus')){?>
+<!-- Data berhasil dihapus -->
+<div class="alert alert-danger" role="alert">
+  <?= $this->session->flashdata('hapus');?>
+</div>
+<?php }?>
 <!-- DataTales Example -->
 <div class="card shadow mb-4">
   <div class="card-header py-3">
@@ -27,7 +44,7 @@
             ?>
             <td><?= $no++?></td>
             <td><?= $a->id_admin?></td>
-            <td><?= $a->nama_admin?></td>
+            <td><?= $a->nama?></td>
             <td><center><div data-toggle="modal" data-target="#edit_data_<?=$a->id_admin?>" class="btn btn-primary btn-sm"><i class="fas fa-edit">Edit Data</i></div></center></td>
             <td><center><div data-toggle="modal" data-target="#hapus_data_<?=$a->id_admin?>" class="btn btn-danger btn-sm"><i class="fas fa-trash">Hapus Data</i></div></center></td>
           </tr>
@@ -57,7 +74,7 @@
         <div class="modal-body">
         <form action="<?php echo base_url('admin/admin/tambah_data'); ?>" method="post">
             <h6>Nama Admin</h6>
-            <input type="text" class="form-control form-control-user" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="Masukkan Nama Admin Baru" name="nama_admin">
+            <input type="text" class="form-control form-control-user" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="Masukkan Nama Admin Baru" name="nama">
             <h6 class="mt-2">Password</h6>
             <input type="password" class="form-control form-control-user" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="Masukkan Password Disini" name="password">
             </div>
@@ -89,7 +106,7 @@
         <input type="text" readonly value="<?=$a->id_admin ?>" name="id_admin" class="form-control">
             <h6>Nama Admin</h6>
             <input type="text" class="form-control form-control-user" id="exampleInputEmail" 
-            aria-describedby="emailHelp" placeholder="Masukkan Nama admin disini" name="nama_admin" value="<?=$a->nama_admin?>">
+            aria-describedby="emailHelp" placeholder="Masukkan Nama admin disini" name="nama" value="<?=$a->nama?>">
         <div class="modal-footer">
           <button class="btn btn-danger" type="button" data-dismiss="modal">Cancel</button>
           <input type="submit" value="Tambah" class="btn btn-primary">

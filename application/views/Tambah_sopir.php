@@ -10,14 +10,14 @@
                             <h1 class="h4 text-gray-900 mb-4">Tambah Data Sopir</h1>
                         </div>
 
-                        <?php echo form_open_multipart('sopir/index'); ?>
+                        <?php echo form_open_multipart('admin/sopir/tambah'); ?>
                         <div class="col-sm-10">
 
                             <input type="hidden" class="form-control" id="id_supir" placeholder="Masukkan nama..." name="id_supir">
                         </div>
                         <div class="col-sm-10">
                             <label for=" hari">Nama</label>
-                            <input type="text" class="form-control" id="nama_supir" placeholder="Masukkan nama..." name="hari">
+                            <input type="text" class="form-control" id="nama_supir" placeholder="Masukkan nama..." name="nama_supir">
                         </div>
 
                         <div class="col-sm-10">

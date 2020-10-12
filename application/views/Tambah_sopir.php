@@ -8,6 +8,18 @@
                     <div class="p-5">
                         <div class="text-center">
                             <h1 class="h4 text-gray-900 mb-4">Tambah Data Sopir</h1>
+                            <?php if ($this->session->flashdata('flash')) : ?>
+                                <div class="row mt-3">
+                                    <div class="alert alert-success alert-dismissible fade show" role="alert">Data
+                                        berhasil <?= $this->session->flashdata('flash'); ?>.
+                                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="col-md-6">
+                                    </div>
+                                </div>
+                            <?php endif; ?>
                         </div>
 
                         <?php echo form_open_multipart('admin/sopir/tambah'); ?>

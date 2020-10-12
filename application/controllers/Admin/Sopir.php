@@ -45,7 +45,7 @@ class Sopir extends CI_Controller
 
         );
         $this->crud->tambah_data($data, 'supir');
-
+        $this->session->set_flashdata('flash', 'ditambahkan');
         redirect('admin/sopir');
     }
 }

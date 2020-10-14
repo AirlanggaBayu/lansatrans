@@ -37,16 +37,18 @@ class Admin extends CI_Controller
     function tambah_data()
     {
         $nama = $this->input->post('nama');
+        $username = $this->input->post('username');
         $pass = $this->input->post('password');
 
         $data = array(
             'nama' => $nama,
-            'password' => md5($pass)
+            'username' => $username,
+            'password' => password_hash($pass, PASSWORD_DEFAULT)
         );
 
         $this->crud->tambah_data($data, 'admin');
         if ($this->db->affected_rows() > 0) {
-            $this->session->set_flashdata('tambah', 'Data Berhasil Ditambahkan');
+            $this->session->set_flashdata('flash', 'Ditambahkan');
         }
         redirect('admin/admin/index');
     }
@@ -56,14 +58,16 @@ class Admin extends CI_Controller
         //perintah ini digunakan untuk memasukkan data sesuai dengan kolom pada tabel database
         $id = $this->input->post('id_admin');
         $nama = $this->input->post('nama');
+        $username = $this->input->post('username');
 
         $where = array('id_admin' => $id); // mengubah id menjadi bentuk array
         $data = array(
             'nama' => $nama,
+            'username' => $username
         );
         $this->crud->ubah_data($where, $data, 'admin'); //perintah untuk mengupdate data
         if ($this->db->affected_rows() > 0) {
-            $this->session->set_flashdata('edit', 'Data Berhasil Diubah');
+            $this->session->set_flashdata('flash', 'Diubah');
         }
         redirect('admin/admin/index');
     }
@@ -73,7 +77,7 @@ class Admin extends CI_Controller
         $where = array('id_admin' => $id_admin); // mengubah id menjadi bentuk array
         $this->crud->hapus_data($where, 'admin'); //perintah untuk menghapus data sesuai dengan tabel dan id yang diinginkan
         if ($this->db->affected_rows() > 0) {
-            $this->session->set_flashdata('hapus', 'Data Berhasil Dihapus');
+            $this->session->set_flashdata('flash', 'Dihapus');
         }
         redirect('admin/admin/index');
     }

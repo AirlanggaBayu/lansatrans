@@ -4,22 +4,13 @@
 <!-- Page Heading -->
 <h1 class="h3 mb-2 text-gray-800">Data Admin</h1>
 
+<div class="flash-data" data-flashdata="<?= $this->session->flashdata('flash');?>"></div>
 <!-- Alert -->
-<?php if($this->session->has_userdata('tambah')){?>
+<?php if($this->session->flashdata('flash')){?>
 <!-- Data berhasil ditambahkan -->
-<div class="alert alert-success" role="alert">
-  <?= $this->session->flashdata('tambah');?>
-</div>
-<?php }elseif($this->session->has_userdata('edit')){?>
-<!-- Data berhasil diubah -->
-<div class="alert alert-success" role="alert">
-  <?= $this->session->flashdata('edit');?>
-</div>
-<?php }elseif($this->session->has_userdata('hapus')){?>
-<!-- Data berhasil dihapus -->
-<div class="alert alert-danger" role="alert">
-  <?= $this->session->flashdata('hapus');?>
-</div>
+<!-- <div class="alert alert-success" role="alert">
+  <h6>Data admin <strong>berhasil</strong> <?= $this->session->flashdata('flash');?></h6>
+</div> -->
 <?php }?>
 <!-- DataTales Example -->
 <div class="card shadow mb-4">

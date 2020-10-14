@@ -13,6 +13,21 @@
             $this->load->view('template_admin/footer');
         }
 
+        function halaman_tambah_data(){
+            $this->load->view('template_admin/header');
+            $this->load->view('template_admin/sidebar');
+            $this->load->view('tambah_admin');
+            $this->load->view('template_admin/footer');
+        }
+
+        function halaman_edit_data($id_admin){
+            $data['admin'] = $this->crud->detail_data(['id_admin' => $id_admin], 'admin')->result();
+            $this->load->view('template_admin/header');
+            $this->load->view('template_admin/sidebar');
+            $this->load->view('edit_admin', $data);
+            $this->load->view('template_admin/footer');
+        }
+
         function tambah_data(){
             $nama = $this->input->post('nama');
             $pass = $this->input->post('password');

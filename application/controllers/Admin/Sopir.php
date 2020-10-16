@@ -123,6 +123,8 @@ class Sopir extends CI_Controller
 
         // function hapus digunakan untuk menghapus data yang kita ingin hapus
     }
+
+    
 }
 
     //dikerjakan Angga //

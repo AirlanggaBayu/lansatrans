@@ -81,6 +81,16 @@ class Admin extends CI_Controller
         }
         redirect('admin/admin/index');
     }
+
+    public function saran()
+    {
+
+        $data['saran'] = $this->crud->tampil_data('saran')->result();
+        $this->load->view('template_admin/header');
+        $this->load->view('template_admin/sidebar');
+        $this->load->view('kritik', $data);
+        $this->load->view('template_admin/footer');
+    }
 }
 ?>
 <!-- Dibuat oleh dodhy -->

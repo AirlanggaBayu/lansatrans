@@ -25,20 +25,20 @@
                         <?php echo form_open_multipart('admin/mobil/tambah_mobil'); ?>
                         <div class="col-sm-10">
 
-                            <input type="hidden" class="form-control" id="id_mobil" placeholder="Masukkan nama..." name="id_mobil">
+                            <input type="hidden" class="form-control" id="id_mobil" placeholder="Masukkan nama..." name="id_mobil" >
                         </div>
                         <div class="col-sm-10">
                             <label for="merk">Merk Mobil</label>
-                            <input type="text" class="form-control" id="merk" placeholder="Masukkan merk..." name="merk">
+                            <input type="text" class="form-control" id="merk" placeholder="Masukkan merk..." name="merk" autocomplete="off">
                         </div>
                         <div class="col-sm-10">
                             <label for="merk">Warna Mobil</label>
-                            <input type="text" class="form-control" id="warna" placeholder="Masukkan warna..." name="warna">
+                            <input type="text" class="form-control" id="warna" placeholder="Masukkan warna..." name="warna" autocomplete="off" >
                         </div>
 
                         <div class="col-sm-10">
                             <label for=" plat">Plat Nomor Mobil</label>
-                            <input type="text" class="form-control" id="plat" placeholder="Masukan plat.." name="plat">
+                            <input type="text" class="form-control" id="plat" placeholder="Masukan plat.." name="plat" autocomplete="off">
                         </div>
                         <div class="col-sm-10">
                             <label for=" telepon">kapasitas mobil</label>

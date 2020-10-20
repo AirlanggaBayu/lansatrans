@@ -31,22 +31,22 @@
                                 <input type="hidden" class="form-control" id="id_mobil" placeholder="Masukkan nama..." name="id_mobil" value="<?= $u->id_mobil ?>">
                             </div>
                             <div class="col-sm-10">
-                                <label for=" hari">Nama</label>
-                                <input type="text" class="form-control" id="merk" placeholder="Masukkan nama..." name="merk" value="<?= $u->merk ?>">
+                                <label for=" hari">Merk Mobil</label>
+                                <input type="text" class="form-control" id="merk" placeholder="Masukkan merk..." name="merk" value="<?= $u->merk ?>" autocomplete="off">
                             </div>
 
                             <div class=" col-sm-10">
-                                <label for=" alamat">Alamat</label>
-                                <input type="text" class="form-control" id="warna" placeholder="Masukan alamat.." name="warna" value="<?= $u->warna ?>"></input>
+                                <label for=" alamat">Warna Mobil</label>
+                                <input type="text" class="form-control" id="warna" placeholder="Masukan Warna.." name="warna" value="<?= $u->warna ?>" autocomplete="off"></input>
                             </div>
                             
 
                             <div class=" col-sm-10">
-                                <label for=" alamat">Alamat</label>
-                                <input type="text" class="form-control" id="plat" placeholder="Masukan alamat.." name="plat" value="<?= $u->plat ?>"></input>
+                                <label for=" alamat">Plat Nomor Mobil</label>
+                                <input type="text" class="form-control" id="plat" placeholder="Masukan Plat.." name="plat" value="<?= $u->plat ?>"autocomplete="off"></input>
                             </div>
                             <div class=" col-sm-10">
-                                <label for=" telepon">Telepon</label>
+                                <label for=" telepon">Kapasitas Mobil</label>
                                 <input type="text" onkeypress="return hanyaAngka(event)" max="12" class="form-control" id="kapasitas" placeholder="Masukkan hanya angka... "
                                  name="kapasitas" value="<?= $u->kapasitas ?>">
                             </div>

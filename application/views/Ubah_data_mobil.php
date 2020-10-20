@@ -25,7 +25,7 @@
                         $no = 0;
                         foreach ($mobil as $u) {
                             $no++ ?>
-                            <?php echo form_open_multipart('auth/ubah_mobil/' . $u->id_mobil); ?>
+                            <?php echo form_open_multipart('admin/mobil/ubah_mobil/' . $u->id_mobil); ?>
                             <div class="col-sm-10">
 
                                 <input type="hidden" class="form-control" id="id_mobil" placeholder="Masukkan nama..." name="id_mobil" value="<?= $u->id_mobil ?>">
@@ -74,6 +74,7 @@
 
                             <div class="col-sm-10">
                                 <button type="submit" class="btn btn-success">Edit</button>
+                                <a href="<?= base_url('admin/mobil/index') ?>" class="btn btn-danger ">Back</a>
                             </div>
 
                             <script>

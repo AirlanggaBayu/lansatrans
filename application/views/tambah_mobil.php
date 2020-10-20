@@ -59,7 +59,7 @@
                         <div class="col-sm-10">
                         
                             <button type="submit" class="btn btn-success">Tambah</button>
-                            <a href="<?= base_url('mobil/index') ?>" class="btn btn-danger ">Back</a>
+                            <a href="<?= base_url('admin/mobil/index') ?>" class="btn btn-danger ">Back</a>
                         
                         </div>
 

@@ -4,7 +4,7 @@ class Crud extends CI_Model
     #fungsi ini untuk menampilkan data
     function tampil_data($table)
     {
-        return $this->db->get($table);
+        return $this->db->get($table)->result();
     }
 
     #fungsi ini untuk menghapus data

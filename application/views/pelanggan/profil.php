@@ -23,10 +23,9 @@
                 <label class="label-control" for="lpass2">Ulangi Password</label>
                 <div class="help-block with-errors"></div>
             </div>
-            <div class="form-group">
-                <input type="file" class="form-control-input" id="lfoto" name="lfoto" required>
-                <label class="label-control" for="lfoto">Pilih Foto</label>
-                <div class="help-block with-errors"></div>
+            <div class="form-group custom-file mb-2">
+                <input type="file" class="custom-file-input" id="customFile" name="image">
+                <label class="custom-file-label" for="customFile">Choose file</label>
             </div>
             <div class="form-group">
                 <button type="submit" class="form-control-submit-button">SUBMIT</button>
@@ -34,3 +33,10 @@
         </form>
 
     </section>
+
+    <script>
+        $('.custom-file-input').on('change', function(){
+            let filename = $(this).val().split('\\').pop();
+            $(this).next('.custom-file-label').addClass("selected").html(filename);
+        }); 
+    </script>

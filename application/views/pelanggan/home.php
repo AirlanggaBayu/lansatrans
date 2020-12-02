@@ -76,8 +76,13 @@
                 <li class="nav-item">
                     <a class="nav-link page-scroll" href="rute_travel.html">RUTE TRAVEL</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link page-scroll" href="#services">TARIF TRAVEL</a>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle page-scroll" href="#about" id="navbarDropdown" role="button" aria-haspopup="true" aria-expanded="false">TARIF TRAVEL</a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="terms-conditions.html"><span class="item-text">EKONOMI</span></a>
+                        <div class="dropdown-items-divide-hr"></div>
+                        <a class="dropdown-item" href="privacy-policy.html"><span class="item-text">EKSEKUTIF</span></a>
+                    </div>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link page-scroll" href="#callMe">RESERVASI</a>

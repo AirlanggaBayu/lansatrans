@@ -27,4 +27,15 @@ class Rute extends CI_Model
             return false;
         }
     }
+
+    function get_data_tarif_bykelas($kelas){
+        $this->db->where('kelas', $kelas);
+        $hasil = $this->db->get('rute');
+
+        if ($hasil->num_rows() > 0){
+            return $hasil->result();
+        }else{
+            return false;
+        }
+    }
 }

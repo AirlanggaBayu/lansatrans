@@ -16,7 +16,6 @@
             </div>
             <div class="form-group">
                 <input type="text" class="form-control-input" value="<?php echo $kodee; ?>" id="kode_pesan" name="kode_pesan" readonly>
-                <label class="label-control" for="kode_pesan">Nomor Pemesanan</label>
                 <div class="help-block with-errors"></div>
             </div>
 
@@ -41,14 +40,12 @@
             </div>
             <div class="row">
                 <div class="form-group col-lg-6">
-                    <input type="text" class="form-control-input" id="kelas" name="kelas" readonly>
-                    <label class="label-control" for="kode_pesan">Kelas</label>
+                    <input type="text" class="form-control-input" id="kelas" name="kelas" readonly placeholder="Kelas">
                     <div class="help-block with-errors"></div>
 
                 </div>
                 <div class="form-group col-lg-6">
-                    <input type="text" class="form-control-input" id="harga" name="harga" readonly>
-                    <label class="label-control" for="kode_pesan">Harga</label>
+                    <input type="text" class="form-control-input" id="harga" name="harga" readonly placeholder="Harga">
                     <div class="help-block with-errors"></div>
 
                 </div>
@@ -81,7 +78,6 @@
             </div>
             <div class="form-group">
                 <input type="date" class="form-control-input" id="tgl_berangkat" name="tgl_berangkat" required>
-                <label class="label-control" for="harga_total">Tanggal Berangkat</label>
                 <div class="help-block with-errors"></div>
             </div>
             <div class="form-group">

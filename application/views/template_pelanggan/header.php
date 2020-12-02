@@ -61,7 +61,7 @@
         </button>
         <!-- end of mobile menu toggle button -->
 
-        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <div class="collapse navbar-collapse container" id="navbarsExampleDefault">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
                     <a class="nav-link page-scroll" href="<?= base_url('pelanggan/home') ?>">HOME </a>
@@ -82,13 +82,25 @@
                 <li class="nav-item">
                     <a class="nav-link page-scroll" href="#callMe">RESERVASI</a>
                 </li>
-                <li class="nav-item">
+                <?php if($this->session->has_userdata('username_pelanggan')){?>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle page-scroll" href="#about" id="navbarDropdown" role="button" aria-haspopup="true" aria-expanded="false"><?= $this->session->userdata('username_pelanggan')?></a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="terms-conditions.html"><span class="item-text">PROFIL</span></a>
+                        <div class="dropdown-items-divide-hr"></div>
+                        <a class="dropdown-item" href="privacy-policy.html"><span class="item-text">RIWAYAT PEMESANAN</span></a>
+                        <div class="dropdown-items-divide-hr"></div>
+                        <a class="dropdown-item" href="privacy-policy.html"><span class="item-text">LOG OUT</span></a>
+                    </div>
+                </li>
+                <?php }else {?>
+                    <li class="nav-item">
                     <a class="nav-link page-scroll" href="login.html">LOGIN</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link page-scroll" href="registrasi.html">REGISTRASI</a>
                 </li>
-
+                <?php } ?>
             </ul>
             <span class="fa-stack">
                 <a href="#your-link">

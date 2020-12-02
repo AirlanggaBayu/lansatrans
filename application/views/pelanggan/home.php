@@ -52,30 +52,29 @@
 
 
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-md navbar-dark navbar-custom fixed-top">
+    <nav class="navbar navbar-expand-md navbar-dark navbar-custom bg-dark fixed-top">
         <!-- Text Logo - Use this if you don't have a graphic logo -->
         <!-- <a class="navbar-brand logo-text page-scroll" href="index.html">Aria</a> -->
 
         <!-- Image Logo -->
-        <a class="navbar-brand logo-image" href="index.html"><img src="<?= base_url('assets/pelanggan/')?>images/lansatrans.png"
-                style="height:50px; width: 50px;" alt="alternative"></a>
+        <a class="navbar-brand logo-image" href="index.html"><img src="<?= base_url('assets/pelanggan/') ?>images/lansatrans.png" style="height:50px; width: 50px;" alt="alternative"></a>
 
         <!-- Mobile Menu Toggle Button -->
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
-            aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-awesome fas fa-bars"></span>
             <span class="navbar-toggler-awesome fas fa-times"></span>
         </button>
         <!-- end of mobile menu toggle button -->
 
-        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <div class="collapse navbar-collapse container" id="navbarsExampleDefault">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link page-scroll" href="#header">HOME</a>
+                    <a class="nav-link page-scroll" href="<?= base_url('pelanggan/home') ?>">HOME </a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link page-scroll" href="rute_travel.html">RUTE TRAVEL</a>
                 </li>
+                <!-- Dropdown Menu -->          
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle page-scroll" href="#about" id="navbarDropdown" role="button" aria-haspopup="true" aria-expanded="false">TARIF TRAVEL</a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -84,16 +83,29 @@
                         <a class="dropdown-item" href="privacy-policy.html"><span class="item-text">EKSEKUTIF</span></a>
                     </div>
                 </li>
+                <!-- end of dropdown menu -->
                 <li class="nav-item">
                     <a class="nav-link page-scroll" href="#callMe">RESERVASI</a>
                 </li>
-                <li class="nav-item">
+                <?php if($this->session->has_userdata('username_pelanggan')){?>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle page-scroll" href="#about" id="navbarDropdown" role="button" aria-haspopup="true" aria-expanded="false"><?= $this->session->userdata('username_pelanggan')?></a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="terms-conditions.html"><span class="item-text">PROFIL</span></a>
+                        <div class="dropdown-items-divide-hr"></div>
+                        <a class="dropdown-item" href="privacy-policy.html"><span class="item-text">RIWAYAT PEMESANAN</span></a>
+                        <div class="dropdown-items-divide-hr"></div>
+                        <a class="dropdown-item" href="privacy-policy.html"><span class="item-text">LOG OUT</span></a>
+                    </div>
+                </li>
+                <?php }else {?>
+                    <li class="nav-item">
                     <a class="nav-link page-scroll" href="login.html">LOGIN</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link page-scroll" href="registrasi.html">REGISTRASI</a>
                 </li>
-
+                <?php } ?>
             </ul>
             <span class="fa-stack">
                 <a href="#your-link">
@@ -104,8 +116,6 @@
             </span>
         </div>
     </nav> <!-- end of navbar -->
-    <!-- end of navbar -->
-
 
     <!-- Header -->
     <header id="header" class="header">

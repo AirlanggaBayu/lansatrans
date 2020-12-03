@@ -42,4 +42,13 @@ class Crud extends CI_Model
         $this->db->delete('supir');
         //function ini digunakan untuk menghapus data, hapus data disini berdasarkan id
     }
+
+    function joinData($table1, $table2, $table3, $table4, $table5, $join1, $join2, $join3, $join4){
+        $this->db->from($table1);
+        $this->db->join($table2, $join1);
+        $this->db->join($table3, $join2);
+        $this->db->join($table4, $join3);
+        $this->db->join($table5, $join4);
+        return $this->db->get()->result();
+    }
 }

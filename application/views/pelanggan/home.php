@@ -51,8 +51,8 @@
     <!-- end of preloader -->
 
 
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-md navbar-dark navbar-custom bg-dark fixed-top">
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-md navbar-dark navbar-custom bg-dark fixed-top">
         <!-- Text Logo - Use this if you don't have a graphic logo -->
         <!-- <a class="navbar-brand logo-text page-scroll" href="index.html">Aria</a> -->
 
@@ -72,38 +72,38 @@
                     <a class="nav-link page-scroll" href="<?= base_url('pelanggan/home') ?>">HOME </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link page-scroll" href="rute_travel.html">RUTE TRAVEL</a>
+                    <a class="nav-link page-scroll" href="<?= base_url('pelanggan/home/rute_travel')?>">RUTE TRAVEL</a>
                 </li>
                 <!-- Dropdown Menu -->          
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle page-scroll" href="#about" id="navbarDropdown" role="button" aria-haspopup="true" aria-expanded="false">TARIF TRAVEL</a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="terms-conditions.html"><span class="item-text">EKONOMI</span></a>
+                        <a class="dropdown-item" href="<?= base_url('pelanggan/home/ekonomi')?>"><span class="item-text">EKONOMI</span></a>
                         <div class="dropdown-items-divide-hr"></div>
-                        <a class="dropdown-item" href="privacy-policy.html"><span class="item-text">EKSEKUTIF</span></a>
+                        <a class="dropdown-item" href="<?= base_url('pelanggan/home/eksekutif')?>"><span class="item-text">EKSEKUTIF</span></a>
                     </div>
                 </li>
                 <!-- end of dropdown menu -->
                 <li class="nav-item">
-                    <a class="nav-link page-scroll" href="#callMe">RESERVASI</a>
+                    <a class="nav-link page-scroll" href="<?= base_url('pelanggan/reservasi')?>">RESERVASI</a>
                 </li>
                 <?php if($this->session->has_userdata('username_pelanggan')){?>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle page-scroll" href="#about" id="navbarDropdown" role="button" aria-haspopup="true" aria-expanded="false"><?= $this->session->userdata('username_pelanggan')?></a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="terms-conditions.html"><span class="item-text">PROFIL</span></a>
+                        <a class="dropdown-item" href="<?= base_url('pelanggan/profil')?>"><span class="item-text">PROFIL</span></a>
                         <div class="dropdown-items-divide-hr"></div>
-                        <a class="dropdown-item" href="privacy-policy.html"><span class="item-text">RIWAYAT PEMESANAN</span></a>
+                        <a class="dropdown-item" href="<?= base_url('pelanggan/histori')?>"><span class="item-text">RIWAYAT PEMESANAN</span></a>
                         <div class="dropdown-items-divide-hr"></div>
-                        <a class="dropdown-item" href="privacy-policy.html"><span class="item-text">LOG OUT</span></a>
+                        <a class="dropdown-item" href="<?= base_url('auth/logout')?>"><span class="item-text">LOG OUT</span></a>
                     </div>
                 </li>
                 <?php }else {?>
                     <li class="nav-item">
-                    <a class="nav-link page-scroll" href="login.html">LOGIN</a>
+                    <a class="nav-link page-scroll" href="<?= base_url('auth_pelanggan')?>">LOGIN</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link page-scroll" href="registrasi.html">REGISTRASI</a>
+                    <a class="nav-link page-scroll" href="<?= base_url('auth_pelanggan/registration')?>">REGISTRASI</a>
                 </li>
                 <?php } ?>
             </ul>

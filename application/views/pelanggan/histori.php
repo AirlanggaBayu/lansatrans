@@ -7,7 +7,7 @@
             <div class="card-body">
               <h5 class="card-title"><?= $p->nama_pelanggan?></h5>
               <p class="card-text"><?= $p->tgl_pesan?></p>
-              <button type="button" class="btn btn-outline-primary">Detail</button>
+              <a href="<?=base_url('pelanggan/histori/detail_histori/'.$p->id_pemesanan) ?>" type="button" class="btn btn-outline-primary">Detail</a>
             </div>
           </div>
           <?php } ?>

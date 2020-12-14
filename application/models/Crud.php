@@ -51,4 +51,18 @@ class Crud extends CI_Model
         $this->db->join($table5, $join4);
         return $this->db->get()->result();
     }
+    function joinDataDetail($where){
+        $this->db->select('*');
+        $this->db->from('rute');
+        $this->db->join('pemesanan', 'rute.id_rute = pemesanan.id_rute');
+        $this->db->where($where);
+        return $this->db->get();
+    }
+    // function joinDataDetail($where,$table1, $table2,$join1){
+    //     $this->db->select('*');
+    //     $this->db->from($table1);
+    //     $this->db->join($table2, $join1);
+    //     $this->db->where('pemesanan.id_pemesanan', '8');
+    //     return $this->db->get();
+    // }
 }

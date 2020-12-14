@@ -14,17 +14,47 @@ class Histori extends CI_Controller{
         $this->load->view('template_pelanggan/footer');
     }
 
-    function detail_histori(){
-        $join1 = 'pembayaran.id_pemesanan = pemesanan.id_pemesanan';
-        $join2 = 'pelanggan.id_pelanggan = pemesanan.id_pelanggan';
-        $join3 = 'rute.id_rute = pemesanan.id_rute';
-        $join4 = 'mobil.id_mobil = pemesanan.id_mobil';
-        $data['joinan'] = $this->crud->joinData('pembayaran', 'pemesanan', 'pelanggan', 'rute', 'mobil', $join1, $join2, $join3, $join4);
-
-        $this->load->view('template_pelanggan/header');
+   function detail_histori($id_pemesanan){
+    $where = array('pemesanan.id_pemesanan' => $id_pemesanan);
+        $data['pemesanan'] = $this->crud->joinDataDetail($where)->result();
+       $this->load->view('template_pelanggan/header');
         $this->load->view('pelanggan/detail_histori', $data);
         $this->load->view('template_pelanggan/footer');
     }
+   //function bayar ($id_pemesanan){
+    //$data['pemesanan'] = $this->crud->detail_data(['id_pemesanan' => $id_pemesanan], 'pemesanan')->result();
+    //$this->load->view('template_pelanggan/header');
+    //$this->load->view('pelanggan/detail_histori', $data);
+    //$this->load->view('template_pelanggan/footer');
+
+   //}
+   function bayarr(){
+    $id_pemesanan = $this->input->post('id_pemesanan');
+     $foto = $_FILES['foto']['name'];
+         if ($foto =''){}else{
+             $config ['upload_path'] = './assets/bukti-bayar/';
+     		$config ['allowed_types'] = 'jpg|jpeg|png|gif';
+    	$config ['max_size'] = '2048';
+
+             $this->load->library('upload', $config);
+            if (!$this->upload->do_upload('foto')){
+                 echo "Foto Yang Anda Upload Gagal!!";
+             }else{
+                 $foto=$this->upload->data('file_name');
+    }
+         }
+
+    $data = array(
+        'bukti' => $foto,
+        'status_bayar' => 'Sedang Diproses'
+    );
+    $where = array(
+        'id_pemesanan' => $id_pemesanan
+    );
+        $this->crud->ubah_data($where, $data, 'pemesanan');
+        $this->session->set_flashdata('message', 'Data Has Been Change');
+        redirect('pelanggan/histori/index');
+}
 }
 
 

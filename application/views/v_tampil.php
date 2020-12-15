@@ -19,17 +19,16 @@
 						<tr>
 							<th>No</th>
 
-							<th>ID Pelanggan</th>
-							<th>Nama</th>
-							<th>Mobil</th>
-							<th>kelas</th>
-							<th>rute</th>
+							
 							<th>Kode Pesan</th>
+							<th>Nama</th>
 							<th>Jumlah</th>
 							<th>Harga Total</th>
 							<th>Tanggal Pesan</th>
 							<th>Tanggal Berangkat</th>
-							<th>Alamat Jemput</th>
+							<th>Pembayaran</th>
+							<th>Aksi</th>
+
 						</tr>
 					</thead>
 					<?php
@@ -39,19 +38,26 @@
 						<tr>
 							<td><?php echo $no++ ?></td>
 
-							<td><?php echo $p->id_pelanggan ?></td>
-							<td><?php echo $p->nama_pelanggan ?></td>
-							<td><?php echo $p->id_mobil ?></td>
-							<td><?php echo $p->kelas ?></td>
-							<td><?php echo $p->id_rute ?></td>
+							
 							<td><?php echo $p->kode_pesan ?></td>
+							<td><?php echo $p->nama_pelanggan ?></td>
 							<td><?php echo $p->jumlah ?></td>
 							<td><?php echo $p->harga_total ?></td>
 							<td><?php echo $p->tgl_pesan ?></td>
 							<td><?php echo $p->tgl_berangkat ?></td>
-							<td><?php echo $p->alamat_jemput ?></td>
+							<td><?php echo $p->status_bayar ?></td>
 
+							<td>
+
+								<a href="<?= base_url('Admin/Mobil/detailmobil/') ?>" class="btn btn-sm btn-success"> <i class="fas fa-eye"></i></a>
+								<a href="<?= base_url('Admin/Pemesanan/konfirm/') . $p->id_pemesanan ?>" class="btn btn-sm btn-primary"> <i class="fas fa-edit"></i></a>
+								<a href="<?= base_url('Admin/Mobil/hapusmobil/') ?>" class="btn btn-sm btn-danger"> <i class="fas fa-trash"></i></a>
+
+
+							</td>
 						</tr>
+
+
 					<?php } ?>
 
 </body>

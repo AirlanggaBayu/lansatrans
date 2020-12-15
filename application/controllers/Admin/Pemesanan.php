@@ -16,7 +16,7 @@ class Pemesanan extends CI_Controller
 
 	function index()
 	{
-		$data['pemesanan'] = $this->m_data->tampil_data()->result();
+		$data['pemesanan'] = $this->crud->tampil_data('pemesanan');
 		$this->load->view('template_admin/header');
 		$this->load->view('template_admin/sidebar');
 		$this->load->view('v_tampil', $data);
@@ -60,7 +60,7 @@ class Pemesanan extends CI_Controller
 		$alamat_jemput = $this->input->post('alamat_jemput');
 		$no_telp = $this->input->post('no_telp');
 		$jam = $this->input->post('jam');
-		$status = $this->input->post('status');
+		$status = $this->input->post('status_bayar');
 
 		$data = array(
 			'id_pelanggan' => $id_pelanggan,
@@ -76,7 +76,7 @@ class Pemesanan extends CI_Controller
 			'tgl_berangkat' => $tgl_berangkat,
 			'alamat_jemput' => $alamat_jemput,
 			'jam' => $jam,
-			'status' => $status,
+			'status_bayar' => $status,
 
 		);
 
@@ -85,5 +85,17 @@ class Pemesanan extends CI_Controller
 			$this->session->set_flashdata('flash', 'Ditambahkan');
 		}
 		redirect('Admin/Pemesanan/pesan');
+	}
+	public function konfirm($id)
+	{
+		$where = array('id_pemesanan' => $id);
+		$data['pemesanan'] = $this->db->query(" SELECT * FROM pemesanan p WHERE 
+		p.id_pemesanan='$id'")->result();
+		$data['cats'] = $this->mobil->get_category();
+		$data['rute'] = $this->rute->category();
+		$this->load->view('template_admin/header');
+		$this->load->view('template_admin/sidebar');
+		$this->load->view('Konfirmbayar', $data);
+		$this->load->view('template_admin/footer');
 	}
 }

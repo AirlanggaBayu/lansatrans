@@ -124,9 +124,10 @@
                             <textarea class="form-control" id="alamat" placeholder="Masukan alamat jemput" name="alamat_jemput" required></textarea>
                         </div>
 
-                        <div class="col-sm-10">
-                            <label for=" status">status*</label>
-                            <input type="hidden" class="form-control" id="alamat" placeholder="Masukan alamat jemput" name="status_bayar" value="Belum Lunas" required></input>
+                        <div class="form-group">
+                            <input type="hidden" class="form-control-input" id="alamat" name="status_bayar" value="Belum Lunas"> </input>
+
+                            <div class="help-block with-errors"></div>
                         </div>
                         <br>
 
@@ -137,7 +138,8 @@
                         <div class="col-sm-10">
 
                             <button type="submit" class="btn btn-success">Pesan</button>
-                            <a href="<?= base_url('admin/mobil/index') ?>" class="btn btn-danger ">Back</a>
+                            <button type="reset" class="btn btn-danger">Kosongkan</button>
+
 
                         </div>
 

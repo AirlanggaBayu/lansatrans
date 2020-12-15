@@ -87,6 +87,6 @@ class Auth extends CI_Controller
         $this->session->unset_userdata('username');
 
         $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Anda berhasil logged out!</div>');
-        redirect('auth');
+        redirect('auth_pelanggan/');
     }
 }

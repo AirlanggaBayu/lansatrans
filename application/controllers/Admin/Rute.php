@@ -1,13 +1,16 @@
 <?php
 
-class Rute extends CI_Controller{
-    public function __construct(){
+class Rute extends CI_Controller
+{
+    public function __construct()
+    {
         parent::__construct();
         $this->load->model('crud');
     }
-    
-    function index(){
-        $data['rute'] = $this->crud->tampil_data('rute')->result();
+
+    function index()
+    {
+        $data['rute'] = $this->crud->tampil_data('rute');
         $this->load->view('template_admin/header');
         $this->load->view('template_admin/sidebar');
         $this->load->view('rute', $data);

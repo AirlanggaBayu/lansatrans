@@ -16,7 +16,8 @@ class Reservasi extends CI_Controller
 
     function index()
     {
-
+        $data['pelanggan'] = $this->db->get_where('pelanggan', ['username_pelanggan' =>
+        $this->session->userdata('username_pelanggan')])->row_array();
         $data['kodee'] = $this->Kode->kodee();
         $data['tampil'] = $this->Kode->tampil();
         $data['cats'] = $this->mobil->get_category();
@@ -48,6 +49,8 @@ class Reservasi extends CI_Controller
         $tgl_berangkat = $this->input->post('tgl_berangkat');
         $alamat_jemput = $this->input->post('alamat_jemput');
         $no_telp = $this->input->post('no_telp');
+        $jam = $this->input->post('jam');
+        $status = $this->input->post('status_bayar');
 
         $data = array(
             'id_pelanggan' => $id_pelanggan,
@@ -62,13 +65,15 @@ class Reservasi extends CI_Controller
             'tgl_pesan' => $tgl_pesan,
             'tgl_berangkat' => $tgl_berangkat,
             'alamat_jemput' => $alamat_jemput,
+            'jam' => $jam,
+            'status_bayar' => $status,
 
         );
 
         $this->crud->tambah_data($data, 'pemesanan');
         if ($this->db->affected_rows() > 0) {
-            $this->session->set_flashdata('flash', 'Ditambahkan');
+            $this->session->set_flashdata('flash', 'pembayaran');
         }
-        redirect('Admin/Pemesanan/pesan');
+        redirect('pelanggan/reservasi/');
     }
 }

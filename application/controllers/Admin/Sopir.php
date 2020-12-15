@@ -9,7 +9,7 @@ class Sopir extends CI_Controller
     public function index()
     {
 
-        $data['supir'] = $this->crud->tampil_data('supir')->result();
+        $data['supir'] = $this->crud->tampil_data('supir');
         $this->load->view('template_admin/header');
         $this->load->view('template_admin/sidebar');
         $this->load->view('daftar_sopir', $data);
@@ -19,7 +19,7 @@ class Sopir extends CI_Controller
     public function baru()
     {
 
-        $data['supir'] = $this->crud->tampil_data('supir')->result();
+
         $this->load->view('template_admin/header');
         $this->load->view('template_admin/sidebar');
         $this->load->view('tambah_sopir');
@@ -123,8 +123,6 @@ class Sopir extends CI_Controller
 
         // function hapus digunakan untuk menghapus data yang kita ingin hapus
     }
-
-    
 }
 
     //dikerjakan Angga //

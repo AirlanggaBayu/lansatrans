@@ -1,16 +1,28 @@
 <section class="isi container" style="margin-top: 100px;">
+    <?php if ($this->session->flashdata('flash')) : ?>
+        <div class="row ml-4 mt-3">
+            <div class="alert alert-success alert-dismissible fade show" role="alert">Pemesanan anda berhasil, silahkan lakukan <?= $this->session->flashdata('flash'); ?>.
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+
+            <div class="col-md-6">
+            </div>
+        </div>
+    <?php endif; ?>
     <h2 class="text-center mb-3">FORMULIR PEMESANAN</h2>
     <div class="row">
         <div class="col-lg-8">
             <?php echo form_open_multipart('Pelanggan/Reservasi/tambah_data'); ?>
-
+            <?php $pelanggan; ?>
             <div class="form-group">
                 <input type="hidden" class="form-control-input" id="id_pemesanan" name="id_pemesanan" required>
                 <label class="label-control" for="lname">Name</label>
                 <div class="help-block with-errors"></div>
             </div>
             <div class="form-group">
-                <input type="hidden" value="-" class="form-control-input" id="id_pelanggan" name="id_pelanggan" required>
+                <input type="hidden" class="form-control-input" id="id_pelanggan" value="<?= $pelanggan['id_pelanggan']; ?>" name="id_pelanggan" required>
                 <label class="label-control" for="lname">Name</label>
                 <div class="help-block with-errors"></div>
             </div>
@@ -39,13 +51,18 @@
                 <div class="help-block with-errors"></div>
             </div>
             <div class="row">
-                <div class="form-group col-lg-6">
+                <div class="form-group col-lg-4">
                     <input type="text" class="form-control-input" id="kelas" name="kelas" readonly placeholder="Kelas">
                     <div class="help-block with-errors"></div>
 
                 </div>
-                <div class="form-group col-lg-6">
+                <div class="form-group col-lg-4">
                     <input type="text" class="form-control-input" id="harga" name="harga" readonly placeholder="Harga">
+                    <div class="help-block with-errors"></div>
+
+                </div>
+                <div class="form-group col-lg-4">
+                    <input type="text" class="form-control-input" id="jam" name="jam" readonly>
                     <div class="help-block with-errors"></div>
 
                 </div>
@@ -82,6 +99,11 @@
             </div>
             <div class="form-group">
                 <textarea class="form-control-input" id="alamat" name="alamat_jemput" required>  </textarea>
+                <label class="label-control" for="harga_total">Alamat Jemput</label>
+                <div class="help-block with-errors"></div>
+            </div>
+            <div class="form-group">
+                <input type="hidden" class="form-control-input" id="alamat" name="status_bayar" value="Belum Lunas"> </input>
                 <label class="label-control" for="harga_total">Alamat Jemput</label>
                 <div class="help-block with-errors"></div>
             </div>
@@ -131,6 +153,7 @@
                     console.log(data);
                     $('#harga').val(data[0].harga);
                     $('#kelas').val(data[0].kelas);
+                    $('#jam').val(data[0].jam);
                 },
                 error: function() {
                     alert('error!');

@@ -10,7 +10,7 @@ class Admin extends CI_Controller
     public function index()
     {
         $data['admin'] = $this->db->get_where('admin', ['username' => $this->session->userdata('username')])->row_array();
-        $data['admin'] = $this->crud->tampil_data('admin')->result();
+        $data['admin'] = $this->crud->tampil_data('admin');
         $this->load->view('template_admin/header');
         $this->load->view('template_admin/sidebar');
         $this->load->view('admin', $data);

@@ -2,7 +2,7 @@
 
     <thead>
         <?php if ($this->session->flashdata('flash')) : ?>
-            <div class="row mt-3">
+            <div class="row ml-4 mt-3">
                 <div class="alert alert-success alert-dismissible fade show" role="alert">Data
                     berhasil <?= $this->session->flashdata('flash'); ?>.
                     <button type="button" class="close" data-dismiss="alert" aria-label="Close">
@@ -15,7 +15,7 @@
         <?php endif; ?>
 
         <tr>
-            <a href="<?= base_url('admin/sopir/baru'); ?>" class="btn btn-success btn-sm"> Tambah Data Supir</a>
+            <a href="<?= base_url('admin/sopir/baru'); ?>" class="btn btn-success btn-sm ml-4"> Tambah Data Supir</a>
             <br>
             <br>
             <th scope="col">No</th>

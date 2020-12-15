@@ -79,9 +79,14 @@
                             <input type="text" class="form-control" id="kelas" placeholder="" name="kelas" autocomplete="off">
                         </div>
 
+                        <div class=" col-sm-10">
+                            <label for=" plat">Jam Keberangkatan</label>
+                            <input type="text" class="form-control" id="jam" placeholder="" name="jam" autocomplete="off" readonly>
+                        </div>
+
                         <div class="col-sm-10">
                             <label for=" plat">Jumlah</label>
-                            <input type="number" min="1" max="3" class="form-control" id="jumlah" placeholder="" name="jumlah" autocomplete="off">
+                            <input type="number" min="1" max="3" class="form-control" id="jumlah" placeholder="" name="jumlah" required autocomplete="off">
                         </div>
 
                         <div class="col-sm-10">
@@ -111,12 +116,17 @@
 
                         <div class="col-sm-10">
                             <label for=" plat">Tanggal Berangkat*</label>
-                            <input type="date" class="form-control" id="" name="tgl_berangkat" required>
+                            <input type="date" class="form-control" id="" name="tgl_berangkat" min="<?php echo date("Y-m-d", strtotime("+1days")); ?>" required>
                         </div>
 
                         <div class="col-sm-10">
                             <label for=" alamat">Alamat Jemput*</label>
                             <textarea class="form-control" id="alamat" placeholder="Masukan alamat jemput" name="alamat_jemput" required></textarea>
+                        </div>
+
+                        <div class="col-sm-10">
+                            <label for=" status">status*</label>
+                            <input type="hidden" class="form-control" id="alamat" placeholder="Masukan alamat jemput" name="status_bayar" value="Belum Lunas" required></input>
                         </div>
                         <br>
 
@@ -170,6 +180,7 @@
                     console.log(data);
                     $('#harga').val(data[0].harga);
                     $('#kelas').val(data[0].kelas);
+                    $('#jam').val(data[0].jam);
                 },
                 error: function() {
                     alert('error!');

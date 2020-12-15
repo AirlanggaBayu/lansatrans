@@ -59,6 +59,8 @@ class Pemesanan extends CI_Controller
 		$tgl_berangkat = $this->input->post('tgl_berangkat');
 		$alamat_jemput = $this->input->post('alamat_jemput');
 		$no_telp = $this->input->post('no_telp');
+		$jam = $this->input->post('jam');
+		$status = $this->input->post('status');
 
 		$data = array(
 			'id_pelanggan' => $id_pelanggan,
@@ -73,6 +75,8 @@ class Pemesanan extends CI_Controller
 			'tgl_pesan' => $tgl_pesan,
 			'tgl_berangkat' => $tgl_berangkat,
 			'alamat_jemput' => $alamat_jemput,
+			'jam' => $jam,
+			'status' => $status,
 
 		);
 

@@ -15,8 +15,8 @@
               </div>
               <div class="row mb-2">
                 <div class="col-lg-6">
-                    <label for=""><strong>Kelas Travel</strong></label>
-                    <p class="card-text"><?= $pemesanan[0]->kelas?></p>
+                <label for=""><strong>Rute</strong></label>
+                    <p class="card-text"><?= $pemesanan[0]->rute?></p>
                 </div>
                 <div class="col-lg-6">
                 <label for=""><strong>Jumlah Bayar</strong></label>
@@ -25,12 +25,12 @@
               </div>
               <div class="row mb-2">
                 <div class="col-lg-6">
-                    <label for=""><strong>Rute</strong></label>
-                    <p class="card-text"><?= $pemesanan[0]->rute?></p>
+                    <label for=""><strong>Jam Keberangkatan</strong></label>
+                    <p class="card-text"><?= $pemesanan[0]->jam?></p>
                 </div>
                 <div class="col-lg-6">
-                    <label for=""><strong>Tanggal Keberangkatan</strong></label>
-                    <p class="card-text"><?= $pemesanan[0]->tgl_berangkat?></p>
+                    <label for=""><strong>Mobil</strong></label>
+                    <p class="card-text"><?= $pemesanan[0]->merk?></p>
                 </div>
               </div>
               <div class="row mb-2">
@@ -38,13 +38,32 @@
                     <label for=""><strong>Tanggal Pemesanan</strong></label>
                     <p class="card-text"><?= $pemesanan[0]->tgl_pesan?></p>
                 </div>
-               
+                <div class="col-lg-6">
+                    <label for=""><strong>Tanggal Keberangkatan</strong></label>
+                    <p class="card-text"><?= $pemesanan[0]->tgl_berangkat?></p>
+                 </div>
               </div>
-                <label for=""><strong>Alamat</strong></label>
-                <p class="card-text"><?= $pemesanan[0]->alamat_jemput?></p>
-                <label for=""><strong>Status Pembayaran</strong></label>
-                <p class="card-text text-danger"><?= $pemesanan[0]->status_bayar?></p>
-            </div>
+              <div class="row mb-2">
+                <div class="col-lg-6">
+                    <label for=""><strong>Alamat</strong></label>
+                    <p class="card-text"><?= $pemesanan[0]->alamat_jemput?></p>
+                </div>
+                <div class="col-lg-6">
+                    <label for=""><strong> Plat Nomor Mobil </strong></label>
+                    <p class="card-text"><?= $pemesanan[0]->plat?></p>
+                 </div>
+              </div>
+              <div class="row mb-2">
+                <div class="col-lg-6">
+                    <label for=""><strong>Status Pembayaran</strong></label>
+                    <p class="card-text"><?= $pemesanan[0]->status_bayar?></p>
+                </div>
+                <div class="col-lg-6">
+                    <label for=""><strong> mobil Penggati </strong></label>
+                    <p class="card-text"><?= $pemesanan[0]->mobil_pengganti?></p>
+                 </div>
+              </div>
+              </div>
             <button type="button" class="btn btn-primary mb-2" data-toggle="modal" data-target="#unggah">Unggah Bukti Pembayaran</button>
           </div>
     </section>

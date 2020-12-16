@@ -8,7 +8,7 @@
                     <div class="col-lg">
                         <div class="p-5">
                             <div class="text-center">
-                                <h1 class="h4 text-gray-900 mb-4">KONFIRMASI TIKET</h1>
+                                <h1 class="h4 text-gray-900 mb-4">DETAIL PEMESANAN TIKET</h1>
                                 <?php if ($this->session->flashdata('flash')) : ?>
                                     <div class="row mt-3">
                                         <div class="alert alert-success alert-dismissible fade show" role="alert">Data
@@ -55,20 +55,9 @@
                             </div>
 
 
-                            <div class="col-sm-10">
-                                <label for=" plat">Mobil* </label>
-                                <select class="form-control" id="mobil" name="id_mobil" required>
-                                    <option selected="0">---Pilih Mobil---</option>
-                                    <?php foreach ($cats as $cat) : ?>
-                                        <option value="<?php echo $cat->id_mobil; ?>"> <?php echo $cat->merk; ?></option>
-                                    <?php endforeach; ?>
-                                </select>
-                            </div>
 
-                            <div class="col-sm-10">
-                                <label for="merk">Mobil Pengganti</label>
-                                <input type="text" class="form-control" id="no.telp" placeholder="Jika mobil tidak tersedia" name="mobil_pengganti" autocomplete="off">
-                            </div>
+
+
 
                             <div class=" col-sm-10">
                                 <label for=" plat">Kelas</label>
@@ -114,11 +103,7 @@
 
                             <div class="col-sm-10">
                                 <label for=" alamat">Status Pembayaran*</label>
-                                <select name="status_bayar" id="status_pembayaran" class="form-control">
-                                    <option value=" <?= $p->status_bayar ?>"><?= $p->status_bayar ?></option>
-                                    <option value="Lunas">Lunas</option>
-
-                                </select>
+                                <input class="form-control" id="alamat" placeholder="Masukan alamat jemput" value="<?= $p->status_bayar ?>" name="status_bayar" readonly required></input>
                             </div>
                             <br>
 
@@ -128,8 +113,8 @@
 
                             <div class="col-sm-10">
 
-                                <button type="submit" class="btn btn-success">Konfirmasi</button>
-                                <a href="<?= base_url('Admin/Pemesanan/') ?>" class="btn btn-sm btn-danger">Batal</a>
+
+                                <a href="<?= base_url('Admin/Pemesanan/') ?>" class="btn btn-sm btn-danger ml-8">Kembali</a>
 
 
                             </div>

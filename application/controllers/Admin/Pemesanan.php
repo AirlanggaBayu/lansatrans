@@ -98,4 +98,60 @@ class Pemesanan extends CI_Controller
 		$this->load->view('Konfirmbayar', $data);
 		$this->load->view('template_admin/footer');
 	}
+
+	function edit_data()
+	{
+		$this->db->set('id_mobil', $id_mobil);
+		$this->db->set('mobil_pengganti', $mobil_pengganti);
+		$this->db->set('status_bayar', $status_bayar);
+		$this->db->where('id_pemesanan', $id_pemesanan);
+		$this->db->update('pemesanan');
+		$this->session->set_flashdata('message', '<div class= "alert alert-success" role="alert">
+            Profil berhasil diubah  </div>');
+		redirect('admin/pemesanan/');
+	}
+
+
+	function halaman_ubah_bayar($id_pemesanan)
+	{
+		$data['pemesanan'] = $this->crud->detail_data(['id_pemesanan' => $id_pemesanan], 'pemesanan')->result();
+		$data['cats'] = $this->mobil->get_category();
+		$this->load->view('template_admin/header');
+		$this->load->view('template_admin/sidebar');
+		$this->load->view('Konfirmbayar', $data);
+		$this->load->view('template_admin/footer');
+	}
+
+	public function ubah_bayar($id_pemesanan)
+	{
+
+		$data['pemesanan'] = $this->crud->detail_data(['id_pemesanan' => $id_pemesanan], 'pemesanan')->result();
+		$id_mobil = $this->input->post('id_mobil');
+		$mobil_pengganti = $this->input->post('mobil_pengganti');
+		$status_bayar = $this->input->post('status_bayar');
+
+		$data = array(
+			'id_mobil' => $id_mobil,
+
+			'mobil_pengganti' => $mobil_pengganti,
+			'status_bayar' => $status_bayar,
+		);
+		$where = array(
+			'id_pemesanan' => $id_pemesanan
+		);
+		$this->crud->ubah_data($where, $data, 'pemesanan');
+
+		$this->session->set_flashdata('message', 'Data Has Been Change');
+		redirect('admin/pemesanan/index');
+	}
+
+	function halaman_detail($id_pemesanan)
+	{
+		$data['pemesanan'] = $this->crud->detail_data(['id_pemesanan' => $id_pemesanan], 'pemesanan')->result();
+		$data['cats'] = $this->mobil->get_category();
+		$this->load->view('template_admin/header');
+		$this->load->view('template_admin/sidebar');
+		$this->load->view('Detailpesan', $data);
+		$this->load->view('template_admin/footer');
+	}
 }

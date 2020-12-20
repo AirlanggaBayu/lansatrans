@@ -85,9 +85,9 @@ class Auth_Pelanggan extends CI_Controller
 
     public function logout()
     {
-        $this->session->unset_userdata('username');
+        $this->session->sess_destroy('username');
 
         $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Anda berhasil logged out!</div>');
-        redirect('auth/login_pelanggan/');
+        redirect('pelanggan/home');
     }
 }

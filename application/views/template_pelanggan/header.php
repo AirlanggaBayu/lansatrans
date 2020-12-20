@@ -82,7 +82,7 @@
                 <li class="nav-item">
                     <a class="nav-link page-scroll" href="<?= base_url('pelanggan/reservasi')?>">RESERVASI</a>
                 </li>
-                <?php if($this->session->has_userdata('username_pelanggan')){?>
+                <?php if($this->session->userdata('username_pelanggan') != ''){?>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle page-scroll" href="#about" id="navbarDropdown" role="button" aria-haspopup="true" aria-expanded="false"><?= $this->session->userdata('username_pelanggan')?></a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -90,7 +90,7 @@
                         <div class="dropdown-items-divide-hr"></div>
                         <a class="dropdown-item" href="<?= base_url('pelanggan/histori')?>"><span class="item-text">RIWAYAT PEMESANAN</span></a>
                         <div class="dropdown-items-divide-hr"></div>
-                        <a class="dropdown-item" href="<?= base_url('auth/logout')?>"><span class="item-text">LOG OUT</span></a>
+                        <a class="dropdown-item" href="<?= base_url('auth_pelanggan/logout')?>"><span class="item-text">LOG OUT</span></a>
                     </div>
                 </li>
                 <?php }else {?>
@@ -100,8 +100,9 @@
                 <li class="nav-item">
                     <a class="nav-link page-scroll" href="<?= base_url('auth_pelanggan/registration')?>">REGISTRASI</a>
                 </li>
-                <?php } ?>
+                
             </ul>
+            <?php } ?>
             <span class="fa-stack">
                 <a href="#your-link">
                     <span class="hexagon"></span>

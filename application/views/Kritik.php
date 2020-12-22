@@ -20,7 +20,6 @@
             <br>
             <th scope="col">No</th>
             <th scope="col">Pengirim </th>
-            <th scope="col">Kritik dan Saran </th>
             <th scope="col">Tanggal terima </th>
 
             <th colspan="2">
@@ -35,23 +34,14 @@
         ?>
             <tr>
                 <td><?php echo $no++ ?></td>
-                <td><?php echo $b->Pengirim ?></td>
-                <td><?php echo $b->saran ?></td>
+                <td><?php echo $b->pengirim ?></td>
+
                 <td><?php echo $b->tgl_diterima ?></td>
 
                 <td>
-                    <center><?= anchor('admin/sopir/halaman_edit_supir/' . $u->id_supir, '<center><div class="btn btn-sm btn-primary"><i class="fas fa-edit">Edit Data</i></div></center>') ?>
+                    <a href="<?= base_url('admin/admin/detail_saran/' . $b->id_saran) ?>" class="btn btn-sm btn-success"><i class="fas fa-fw fa-eye"></i></a>
+                    <a href="<?= base_url('admin/admin/hapus_saran/' . $b->id_saran) ?>" class="btn btn-sm btn-danger"><i class="fas fa-fw fa-trash"></i></a>
                 </td>
-                <td>
-                    <center>
-                <td>
-                    <center>
-                        <?= anchor('admin/sopir/hapus/' . $u->id_supir, '<center><div class="btn btn-sm btn-danger"><i class="fas fa-trash">Hapus Data</i></div></center>') ?>
-                    </center>
-                </td>
-                </center>
-                </td>
-
 
 
 

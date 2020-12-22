@@ -85,11 +85,21 @@ class Admin extends CI_Controller
     public function saran()
     {
 
-        $data['saran'] = $this->crud->tampil_data('saran')->result();
+        $data['saran'] = $this->crud->tampil_data('saran');
         $this->load->view('template_admin/header');
         $this->load->view('template_admin/sidebar');
-        $this->load->view('kritik', $data);
+        $this->load->view('Kritik', $data);
         $this->load->view('template_admin/footer');
+    }
+
+    function hapus_saran($id_saran)
+    {
+        $where = array('id_saran' => $id_saran); // mengubah id menjadi bentuk array
+        $this->crud->hapus_data($where, 'saran'); //perintah untuk menghapus data sesuai dengan tabel dan id yang diinginkan
+        if ($this->db->affected_rows() > 0) {
+            $this->session->set_flashdata('flash', 'Dihapus');
+        }
+        redirect('admin/admin/saran/');
     }
 }
 ?>

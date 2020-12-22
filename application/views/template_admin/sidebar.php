@@ -9,9 +9,9 @@
       <!-- Sidebar - Brand -->
       <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
         <div class="sidebar-brand-icon rotate-n-15">
-          <i class="fas fa-laugh-wink"></i>
+          <i class="fas fa-car-side"></i>
         </div>
-        <div class="sidebar-brand-text mx-3">SB Admin <sup>2</sup></div>
+        <div class="sidebar-brand-text mx-3">LANSA TRAVEL</div>
       </a>
 
       <!-- Divider -->
@@ -27,34 +27,34 @@
       <!-- Divider -->
       <hr class="sidebar-divider">
       <li class="nav-item">
-        <a class="nav-link" href="<?= base_url('admin/admin')?>">
-          <i class="fas fa-fw fa-tachometer-alt"></i>
+        <a class="nav-link" href="<?= base_url('admin/admin') ?>">
+          <i class="fas fa-fw fa-user-tie"></i>
           <span>Admin</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="<?= base_url('admin/sopir')?>">
-          <i class="fas fa-fw fa-tachometer-alt"></i>
+        <a class="nav-link" href="<?= base_url('admin/sopir') ?>">
+          <i class="fas fa-fw fa-user"></i>
           <span>Sopir</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="<?= base_url('admin/rute')?>">
-          <i class="fas fa-fw fa-tachometer-alt"></i>
+        <a class="nav-link" href="<?= base_url('admin/rute') ?>">
+          <i class="fas fa-fw fa-arrows-alt-h"></i>
           <span>Rute</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="<?= base_url('admin/mobil')?>">
-          <i class="fas fa-fw fa-tachometer-alt"></i>
+        <a class="nav-link" href="<?= base_url('admin/mobil') ?>">
+          <i class="fas fa-fw fa-car"></i>
           <span>Mobil</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="<?= base_url('admin/pemesanan')?>">
-          <i class="fas fa-fw fa-tachometer-alt"></i>
-          <span>Kasir Tiket</span></a>
+        <a class="nav-link" href="<?= base_url('admin/pemesanan') ?>">
+          <i class="fas fa-fw fa-ticket-alt"></i>
+          <span>Pemesanan Tiket</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="<?= base_url('admin/admin/saran')?>">
-          <i class="fas fa-fw fa-tachometer-alt"></i>
-          <span>Kritik dan Pesan</span></a>
+        <a class="nav-link" href="<?= base_url('admin/admin/saran') ?>">
+          <i class="fas fa-fw fa-comment-dots"></i>
+          <span>Kritik dan Saran</span></a>
       </li>
 
       <!-- Divider -->

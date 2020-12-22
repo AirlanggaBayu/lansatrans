@@ -6,8 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- SEO Meta Tags -->
-    <meta name="description"
-        content="Aria is a business focused HTML landing page template built with Bootstrap to help you create lead generation websites for companies and their services.">
+    <meta name="description" content="Aria is a business focused HTML landing page template built with Bootstrap to help you create lead generation websites for companies and their services.">
     <meta name="author" content="Inovatik">
 
     <!-- OG Meta Tags to improve the way the post looks when you share the page on LinkedIn, Facebook, Google+ -->
@@ -20,22 +19,20 @@
     <meta property="og:type" content="article" />
 
     <!-- Website Title -->
-    <title>tampilan lansa</title>
+    <title>Lansa Trans Travel</title>
 
     <!-- Styles -->
     <script src="https://kit.fontawesome.com/6b0af4bcb3.js" crossorigin="anonymous"></script>
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:500,700&display=swap&subset=latin-ext"
-        rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600&display=swap&subset=latin-ext"
-        rel="stylesheet">
-    <link href="<?= base_url('assets/pelanggan/')?>css/bootstrap.css" rel="stylesheet">
-    <link href="<?= base_url('assets/pelanggan/')?>css/fontawesome-all.css" rel="stylesheet">
-    <link href="<?= base_url('assets/pelanggan/')?>css/swiper.css" rel="stylesheet">
-    <link href="<?= base_url('assets/pelanggan/')?>css/magnific-popup.css" rel="stylesheet">
-    <link href="<?= base_url('assets/pelanggan/')?>css/styles2.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:500,700&display=swap&subset=latin-ext" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600&display=swap&subset=latin-ext" rel="stylesheet">
+    <link href="<?= base_url('assets/pelanggan/') ?>css/bootstrap.css" rel="stylesheet">
+    <link href="<?= base_url('assets/pelanggan/') ?>css/fontawesome-all.css" rel="stylesheet">
+    <link href="<?= base_url('assets/pelanggan/') ?>css/swiper.css" rel="stylesheet">
+    <link href="<?= base_url('assets/pelanggan/') ?>css/magnific-popup.css" rel="stylesheet">
+    <link href="<?= base_url('assets/pelanggan/') ?>css/styles2.css" rel="stylesheet">
 
     <!-- Favicon  -->
-    <link rel="icon" href="<?= base_url('assets/pelanggan/')?>images/lansatrans.png">
+    <link rel="icon" href="<?= base_url('assets/pelanggan/') ?>images/lansatrans.png">
 </head>
 
 <body data-spy="scroll" data-target=".fixed-top">
@@ -51,8 +48,8 @@
     <!-- end of preloader -->
 
 
-        <!-- Navbar -->
-        <nav class="navbar navbar-expand-md navbar-dark navbar-custom bg-dark fixed-top">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-md navbar-dark navbar-custom bg-dark fixed-top">
         <!-- Text Logo - Use this if you don't have a graphic logo -->
         <!-- <a class="navbar-brand logo-text page-scroll" href="index.html">Aria</a> -->
 
@@ -72,39 +69,39 @@
                     <a class="nav-link page-scroll" href="<?= base_url('pelanggan/home') ?>">HOME </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link page-scroll" href="<?= base_url('pelanggan/home/rute_travel')?>">RUTE TRAVEL</a>
+                    <a class="nav-link page-scroll" href="<?= base_url('pelanggan/home/rute_travel') ?>">RUTE TRAVEL</a>
                 </li>
-                <!-- Dropdown Menu -->          
+                <!-- Dropdown Menu -->
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle page-scroll" href="#about" id="navbarDropdown" role="button" aria-haspopup="true" aria-expanded="false">TARIF TRAVEL</a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="<?= base_url('pelanggan/home/ekonomi')?>"><span class="item-text">EKONOMI</span></a>
+                        <a class="dropdown-item" href="<?= base_url('pelanggan/home/ekonomi') ?>"><span class="item-text">EKONOMI</span></a>
                         <div class="dropdown-items-divide-hr"></div>
-                        <a class="dropdown-item" href="<?= base_url('pelanggan/home/eksekutif')?>"><span class="item-text">EKSEKUTIF</span></a>
+                        <a class="dropdown-item" href="<?= base_url('pelanggan/home/eksekutif') ?>"><span class="item-text">EKSEKUTIF</span></a>
                     </div>
                 </li>
                 <!-- end of dropdown menu -->
                 <li class="nav-item">
-                    <a class="nav-link page-scroll" href="<?= base_url('pelanggan/reservasi')?>">RESERVASI</a>
+                    <a class="nav-link page-scroll" href="<?= base_url('pelanggan/reservasi') ?>">RESERVASI</a>
                 </li>
-                <?php if($this->session->userdata('username_pelanggan') != ''){?>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle page-scroll" href="#about" id="navbarDropdown" role="button" aria-haspopup="true" aria-expanded="false"><?= $this->session->userdata('username_pelanggan')?></a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="<?= base_url('pelanggan/profil')?>"><span class="item-text">PROFIL</span></a>
-                        <div class="dropdown-items-divide-hr"></div>
-                        <a class="dropdown-item" href="<?= base_url('pelanggan/histori')?>"><span class="item-text">RIWAYAT PEMESANAN</span></a>
-                        <div class="dropdown-items-divide-hr"></div>
-                        <a class="dropdown-item" href="<?= base_url('auth_pelanggan/logout')?>"><span class="item-text">LOG OUT</span></a>
-                    </div>
-                </li>
-                <?php }else {?>
+                <?php if ($this->session->userdata('username_pelanggan') != '') { ?>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle page-scroll" href="#about" id="navbarDropdown" role="button" aria-haspopup="true" aria-expanded="false"><?= $this->session->userdata('username_pelanggan') ?></a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="<?= base_url('pelanggan/profil') ?>"><span class="item-text">PROFIL</span></a>
+                            <div class="dropdown-items-divide-hr"></div>
+                            <a class="dropdown-item" href="<?= base_url('pelanggan/histori') ?>"><span class="item-text">RIWAYAT PEMESANAN</span></a>
+                            <div class="dropdown-items-divide-hr"></div>
+                            <a class="dropdown-item" href="<?= base_url('auth_pelanggan/logout') ?>"><span class="item-text">LOG OUT</span></a>
+                        </div>
+                    </li>
+                <?php } else { ?>
                     <li class="nav-item">
-                    <a class="nav-link page-scroll" href="<?= base_url('auth_pelanggan')?>">LOGIN</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link page-scroll" href="<?= base_url('auth_pelanggan/registration')?>">REGISTRASI</a>
-                </li>
+                        <a class="nav-link page-scroll" href="<?= base_url('auth_pelanggan') ?>">LOGIN</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link page-scroll" href="<?= base_url('auth_pelanggan/registration') ?>">REGISTRASI</a>
+                    </li>
                 <?php } ?>
             </ul>
             <span class="fa-stack">
@@ -127,7 +124,7 @@
                             <h1>LANSA TRANS <span id="js-rotating">TOUR, TRAVEL</span></h1>
                             <p class="p-heading p-large">Perumahan Muktisari
                                 Blok G Nomor 2 Jember , Jawa Timur</p>
-                            <a class="btn-solid-lg page-scroll" href="#intro">LOGIN</a>
+
                         </div>
                     </div> <!-- end of col -->
                 </div> <!-- end of row -->
@@ -154,8 +151,7 @@
                 </div> <!-- end of col -->
                 <div class="col-lg-7">
                     <div class="image-container ml-5">
-                        <img class="img-fluid" src="<?= base_url('assets/pelanggan/')?>images/lansakotak.jpeg" style="height:450px; width: 500px;"
-                            alt="lternative">
+                        <img class="img-fluid" src="<?= base_url('assets/pelanggan/') ?>images/lansakotak.jpeg" style="height:450px; width: 500px;" alt="lternative">
                     </div> <!-- end of image-container -->
                 </div> <!-- end of col -->
             </div> <!-- end of row -->
@@ -299,16 +295,16 @@
 
 
     <!-- Scripts -->
-    <script src="<?= base_url('assets/pelanggan/')?>js/jquery.min.js"></script> <!-- jQuery for Bootstrap's JavaScript plugins -->
-    <script src="<?= base_url('assets/pelanggan/')?>js/popper.min.js"></script> <!-- Popper tooltip library for Bootstrap -->
-    <script src="<?= base_url('assets/pelanggan/')?>js/bootstrap.min.js"></script> <!-- Bootstrap framework -->
-    <script src="<?= base_url('assets/pelanggan/')?>js/jquery.easing.min.js"></script> <!-- jQuery Easing for smooth scrolling between anchors -->
-    <script src="<?= base_url('assets/pelanggan/')?>js/swiper.min.js"></script> <!-- Swiper for image and text sliders -->
-    <script src="<?= base_url('assets/pelanggan/')?>js/jquery.magnific-popup.js"></script> <!-- Magnific Popup for lightboxes -->
-    <script src="<?= base_url('assets/pelanggan/')?>js/morphext.min.js"></script> <!-- Morphtext rotating text in the header -->
-    <script src="<?= base_url('assets/pelanggan/')?>js/isotope.pkgd.min.js"></script> <!-- Isotope for filter -->
-    <script src="<?= base_url('assets/pelanggan/')?>js/validator.min.js"></script> <!-- Validator.js - Bootstrap plugin that validates forms -->
-    <script src="<?= base_url('assets/pelanggan/')?>js/scripts.js"></script> <!-- Custom scripts -->
+    <script src="<?= base_url('assets/pelanggan/') ?>js/jquery.min.js"></script> <!-- jQuery for Bootstrap's JavaScript plugins -->
+    <script src="<?= base_url('assets/pelanggan/') ?>js/popper.min.js"></script> <!-- Popper tooltip library for Bootstrap -->
+    <script src="<?= base_url('assets/pelanggan/') ?>js/bootstrap.min.js"></script> <!-- Bootstrap framework -->
+    <script src="<?= base_url('assets/pelanggan/') ?>js/jquery.easing.min.js"></script> <!-- jQuery Easing for smooth scrolling between anchors -->
+    <script src="<?= base_url('assets/pelanggan/') ?>js/swiper.min.js"></script> <!-- Swiper for image and text sliders -->
+    <script src="<?= base_url('assets/pelanggan/') ?>js/jquery.magnific-popup.js"></script> <!-- Magnific Popup for lightboxes -->
+    <script src="<?= base_url('assets/pelanggan/') ?>js/morphext.min.js"></script> <!-- Morphtext rotating text in the header -->
+    <script src="<?= base_url('assets/pelanggan/') ?>js/isotope.pkgd.min.js"></script> <!-- Isotope for filter -->
+    <script src="<?= base_url('assets/pelanggan/') ?>js/validator.min.js"></script> <!-- Validator.js - Bootstrap plugin that validates forms -->
+    <script src="<?= base_url('assets/pelanggan/') ?>js/scripts.js"></script> <!-- Custom scripts -->
 </body>
 
 </html>

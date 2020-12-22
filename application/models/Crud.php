@@ -43,7 +43,8 @@ class Crud extends CI_Model
         //function ini digunakan untuk menghapus data, hapus data disini berdasarkan id
     }
 
-    function joinData($table1, $table2, $table3, $table4, $table5, $join1, $join2, $join3, $join4){
+    function joinData($table1, $table2, $table3, $table4, $table5, $join1, $join2, $join3, $join4)
+    {
         $this->db->from($table1);
         $this->db->join($table2, $join1);
         $this->db->join($table3, $join2);
@@ -51,7 +52,8 @@ class Crud extends CI_Model
         $this->db->join($table5, $join4);
         return $this->db->get()->result();
     }
-    function joinDataDetail($where){
+    function joinDataDetail($where)
+    {
         $this->db->select('*');
         $this->db->from('pemesanan');
         $this->db->join('rute', 'rute.id_rute = pemesanan.id_rute', 'left');
@@ -66,4 +68,10 @@ class Crud extends CI_Model
     //     $this->db->where('pemesanan.id_pemesanan', '8');
     //     return $this->db->get();
     // }
+
+    public function lihat()
+    {
+        $id = $this->session->userdata('username_pelanggan');
+        return $this->db->get_where('pemesanan', array('username_pelanggan' => $id));
+    }
 }

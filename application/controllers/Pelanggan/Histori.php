@@ -12,6 +12,7 @@ class Histori extends CI_Controller
     function index()
     {
         $data['pemesanan'] = $this->crud->tampil_data('pemesanan');
+        $data['pemesanan'] = $this->crud->lihat()->result();
         $this->load->view('template_pelanggan/header');
         $this->load->view('pelanggan/histori', $data);
         $this->load->view('template_pelanggan/footer');
@@ -21,6 +22,7 @@ class Histori extends CI_Controller
     {
         $where = array('pemesanan.id_pemesanan' => $id_pemesanan);
         $data['pemesanan'] = $this->crud->joinDataDetail($where)->result();
+
         $this->load->view('template_pelanggan/header');
         $this->load->view('pelanggan/detail_histori', $data);
         $this->load->view('template_pelanggan/footer');

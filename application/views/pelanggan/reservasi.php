@@ -22,6 +22,11 @@
                 <div class="help-block with-errors"></div>
             </div>
             <div class="form-group">
+                <input type="text" class="form-control-input" value="<?= $pelanggan['username_pelanggan']; ?>" name="username_pelanggan" readonly>
+
+                <div class="help-block with-errors"></div>
+            </div>
+            <div class="form-group">
                 <input type="hidden" class="form-control-input" id="id_pelanggan" value="<?= $pelanggan['id_pelanggan']; ?>" name="id_pelanggan" required>
                 <label class="label-control" for="lname">Name</label>
                 <div class="help-block with-errors"></div>

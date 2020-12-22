@@ -51,6 +51,7 @@ class Reservasi extends CI_Controller
         $no_telp = $this->input->post('no_telp');
         $jam = $this->input->post('jam');
         $status = $this->input->post('status_bayar');
+        $username_pelanggan = $this->input->post('username_pelanggan');
 
         $data = array(
             'id_pelanggan' => $id_pelanggan,
@@ -67,6 +68,7 @@ class Reservasi extends CI_Controller
             'alamat_jemput' => $alamat_jemput,
             'jam' => $jam,
             'status_bayar' => $status,
+            'username_pelanggan' => $username_pelanggan,
 
         );
 

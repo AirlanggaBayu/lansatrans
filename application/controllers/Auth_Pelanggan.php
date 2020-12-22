@@ -31,7 +31,8 @@ class Auth_Pelanggan extends CI_Controller
         $username = $this->input->post('pusername');
         $password = $this->input->post('ppassword');
 
-        $pelanggan = $this->db->get_where('pelanggan', ['username_pelanggan' => $username])->row_array();
+        $pelanggan = $this->db->get_where('pelanggan', ['username_pelanggan' => $username], ['id_pelanggan' => $id])->row_array();
+
 
         //usernya ada
         if ($pelanggan) {

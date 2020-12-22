@@ -73,8 +73,7 @@
                 </div>
             </div>
             <div class="form-group">
-                <input type="number" class="form-control-input" id="jumlah" name="jumlah" required>
-                <label class="label-control" for="jumlah">jumlah</label>
+                <input type="number" class="form-control-input" id="jumlah" name="jumlah" placeholder="Jumlah" required/>
                 <div class="help-block with-errors"></div>
             </div>
             <div class="form-group">
@@ -89,13 +88,11 @@
             </div>
 
             <div class="form-group">
-                <input type="text" class="form-control-input" readonly id="hargatot" name="harga_total" required>
-                <label class="label-control" for="harga_total">Harga Total</label>
+                <input type="text" class="form-control-input" readonly id="hargatot" name="harga_total" required placeholder="Harga Total">
                 <div class="help-block with-errors"></div>
             </div>
             <div class="form-group">
                 <input type="hidden" value="<?php echo date("Y-m-d"); ?>" class="form-control-input" readonly id="tgl_pesan" name="tgl_pesan" required>
-                <label class="label-control" for="harga_total">Harga Total</label>
                 <div class="help-block with-errors"></div>
             </div>
             <div class="form-group">

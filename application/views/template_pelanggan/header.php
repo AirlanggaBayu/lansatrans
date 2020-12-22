@@ -19,7 +19,7 @@
     <meta property="og:type" content="article" />
 
     <!-- Website Title -->
-    <title>tampilan lansa</title>
+    <title>Lansa Trans Travel</title>
 
     <!-- Styles -->
     <link href="https://fonts.googleapis.com/css?family=Montserrat:500,700&display=swap&subset=latin-ext" rel="stylesheet">
@@ -79,10 +79,11 @@
                     </div>
                 </li>
                 <!-- end of dropdown menu -->
-                <li class="nav-item">
-                    <a class="nav-link page-scroll" href="<?= base_url('pelanggan/reservasi')?>">RESERVASI</a>
-                </li>
+                
                 <?php if($this->session->userdata('username_pelanggan') != ''){?>
+                    <li class="nav-item">
+                    <a class="nav-link page-scroll" href="<?= base_url('pelanggan/reservasi')?>">RESERVASI</a>
+                </li>    
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle page-scroll" href="#about" id="navbarDropdown" role="button" aria-haspopup="true" aria-expanded="false"><?= $this->session->userdata('username_pelanggan')?></a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">

@@ -15,7 +15,7 @@
   <!-- DataTales Example -->
   <div class="card shadow mb-4">
     <div class="card-header py-3">
-      <a class="m-0 font-weight-bold text-primary" href="<?= base_url('admin/rute/halaman_tambah_data') ?>">Tambah Rute Baru</a>
+      <a href="<?= base_url('admin/rute/halaman_tambah_data'); ?>" class="btn btn-primary btn-sm ml-4"> Tambah Rute Baru</a>
     </div>
     <div class="card-body">
       <div class="table-responsive">

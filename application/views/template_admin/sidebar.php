@@ -57,6 +57,12 @@
           <span>Kritik dan Saran</span></a>
       </li>
 
+      <li class="nav-item">
+        <a class="nav-link" href="<?= base_url('admin/admin/logout') ?>">
+          <i class="fas fa-fw fa-door-open"></i>
+          <span>LOGOUT</span></a>
+      </li>
+
       <!-- Divider -->
       <hr class="sidebar-divider d-none d-md-block">
 
@@ -84,7 +90,7 @@
 
           <!-- Topbar Navbar -->
           <ul class="navbar-nav ml-auto">
-             
+
             <!-- Nav Item - User Information -->
             <li class="nav-item dropdown no-arrow">
               <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

@@ -1,5 +1,6 @@
 <table class="table table-striped">
-
+    <!-- Page Heading -->
+    <h1 class="h3 mb-2 ml-5 text-gray-800">Kritik dan Saran</h1>
     <thead>
         <?php if ($this->session->flashdata('flash')) : ?>
             <div class="row mt-3">

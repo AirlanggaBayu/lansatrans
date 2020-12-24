@@ -1,8 +1,9 @@
 <table class="table table-striped">
-
+  <!-- Page Heading -->
+  <h1 class="h3 mb-2 ml-5 text-gray-800">Data Mobil</h1>
   <thead>
     <tr>
-      <a href="<?= base_url('admin/mobil/create_mobil') ?>" class="btn btn-success btn-sm ml-4"><i class="bi bi-plus-circle""></i> <span>Tambah Data Mobil</span></a>
+      <a href="<?= base_url('admin/mobil/create_mobil') ?>" class="btn btn-primary btn-sm ml-4"><i class="bi bi-plus-circle""></i> <span>Tambah Data Mobil</span></a>
         <table class=" table table-bordered" id="dataTable" width="100%" cellspacing="0">
           <thead>
             <th scope="col">No </th>

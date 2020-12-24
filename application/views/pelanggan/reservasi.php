@@ -73,7 +73,7 @@
                 </div>
             </div>
             <div class="form-group">
-                <input type="number" class="form-control-input" id="jumlah" name="jumlah" placeholder="Jumlah" required/>
+                <input type="number" class="form-control-input" id="jumlah" name="jumlah" placeholder="Jumlah" required />
                 <div class="help-block with-errors"></div>
             </div>
             <div class="form-group">
@@ -96,7 +96,7 @@
                 <div class="help-block with-errors"></div>
             </div>
             <div class="form-group">
-                <input type="date" class="form-control-input" id="tgl_berangkat" name="tgl_berangkat" required>
+                <input type="date" class="form-control-input" min="<?php echo date("Y-m-d", strtotime("+1days")); ?>" id="tgl_berangkat" name="tgl_berangkat" required>
                 <div class="help-block with-errors"></div>
             </div>
             <div class="form-group">
@@ -107,6 +107,11 @@
             <div class="form-group">
                 <input type="hidden" class="form-control-input" id="alamat" name="status_bayar" value="Belum Lunas"> </input>
                 <label class="label-control" for="harga_total">Alamat Jemput</label>
+                <div class="help-block with-errors"></div>
+            </div>
+
+            <div class="form-group">
+                <input type="hidden" value="<?php echo date("Y-m-d"); ?>" class="form-control-input" readonly id="tgl_bayar" name="tgl_bayar" required>
                 <div class="help-block with-errors"></div>
             </div>
 

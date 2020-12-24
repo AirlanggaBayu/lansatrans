@@ -15,7 +15,7 @@
 		<div class="card-body">
 			<div class="table-responsive">
 				<table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-					<a href="<?= base_url('Admin/Pemesanan'); ?>" class="btn btn-success btn-sm ml-4"> Tambah Pemesanan</a>
+					<a href="<?= base_url('Admin/Pemesanan'); ?>" class="btn btn-primary btn-sm ml-4"> Tambah Pemesanan</a>
 					<thead>
 						<tr>
 							<th>No</th>

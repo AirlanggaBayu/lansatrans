@@ -44,11 +44,11 @@ class Auth_Pelanggan extends CI_Controller
                 $this->session->set_userdata($data);
                 redirect('pelanggan/home/index');
             } else {
-                $this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">Password salah!</div>');
+                $this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">Username atau Password salah!</div>');
                 redirect('auth_pelanggan');
             }
         } else {
-            $this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">Username salah!</div>');
+            $this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">Username atau Password salah!</div>');
             redirect('auth_pelanggan');
         }
     }
@@ -89,6 +89,6 @@ class Auth_Pelanggan extends CI_Controller
         $this->session->sess_destroy('username');
 
         $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Anda berhasil logged out!</div>');
-        redirect('pelanggan/home');
+        redirect('auth_pelanggan');
     }
 }

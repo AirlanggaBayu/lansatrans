@@ -8,6 +8,11 @@
     <!-- SEO Meta Tags -->
     <meta name="description" content="Aria is a business focused HTML landing page template built with Bootstrap to help you create lead generation websites for companies and their services.">
     <meta name="author" content="Inovatik">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
 
     <!-- OG Meta Tags to improve the way the post looks when you share the page on LinkedIn, Facebook, Google+ -->
     <meta property="og:site_name" content="" /> <!-- website name -->
@@ -46,8 +51,8 @@
     </div>
     <!-- end of preloader -->
 
-<!-- Navbar -->
-<nav class="navbar navbar-expand-md navbar-dark navbar-custom bg-dark fixed-top">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-md navbar-dark navbar-custom bg-dark fixed-top">
         <!-- Text Logo - Use this if you don't have a graphic logo -->
         <!-- <a class="navbar-brand logo-text page-scroll" href="index.html">Aria</a> -->
 
@@ -65,48 +70,48 @@
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
                     <a class="nav-link page-scroll" href="<?= base_url('pelanggan/home') ?>">HOME </a>
-                <!-- Dropdown Menu -->          
+                    <!-- Dropdown Menu -->
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle page-scroll" href="#about" id="navbarDropdown" role="button" aria-haspopup="true" aria-expanded="false">TARIF TRAVEL</a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="<?= base_url('pelanggan/home/ekonomi')?>"><span class="item-text">EKONOMI</span></a>
+                        <a class="dropdown-item" href="<?= base_url('pelanggan/home/ekonomi') ?>"><span class="item-text">EKONOMI</span></a>
                         <div class="dropdown-items-divide-hr"></div>
-                        <a class="dropdown-item" href="<?= base_url('pelanggan/home/eksekutif')?>"><span class="item-text">EKSEKUTIF</span></a>
+                        <a class="dropdown-item" href="<?= base_url('pelanggan/home/eksekutif') ?>"><span class="item-text">EKSEKUTIF</span></a>
                     </div>
                 </li>
                 <!-- end of dropdown menu -->
-                
-                <?php if($this->session->userdata('username_pelanggan') != ''){?>
+
+                <?php if ($this->session->userdata('username_pelanggan') != '') { ?>
                     <li class="nav-item">
-                    <a class="nav-link page-scroll" href="<?= base_url('pelanggan/reservasi')?>">RESERVASI</a>
-                </li>    
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle page-scroll" href="#about" id="navbarDropdown" role="button" aria-haspopup="true" aria-expanded="false"><?= $this->session->userdata('username_pelanggan')?></a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="<?= base_url('pelanggan/profil')?>"><span class="item-text">PROFIL</span></a>
-                        <div class="dropdown-items-divide-hr"></div>
-                        <a class="dropdown-item" href="<?= base_url('pelanggan/histori')?>"><span class="item-text">RIWAYAT PEMESANAN</span></a>
-                        <div class="dropdown-items-divide-hr"></div>
-                        <a class="dropdown-item" href="<?= base_url('auth_pelanggan/logout')?>"><span class="item-text">LOG OUT</span></a>
-                    </div>
-                </li>
-                <?php }else {?>
+                        <a class="nav-link page-scroll" href="<?= base_url('pelanggan/reservasi') ?>">RESERVASI</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle page-scroll" href="#about" id="navbarDropdown" role="button" aria-haspopup="true" aria-expanded="false"><?= $this->session->userdata('username_pelanggan') ?></a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="<?= base_url('pelanggan/profil') ?>"><span class="item-text">PROFIL</span></a>
+                            <div class="dropdown-items-divide-hr"></div>
+                            <a class="dropdown-item" href="<?= base_url('pelanggan/histori') ?>"><span class="item-text">RIWAYAT PEMESANAN</span></a>
+                            <div class="dropdown-items-divide-hr"></div>
+                            <a class="dropdown-item" href="<?= base_url('auth_pelanggan/logout') ?>"><span class="item-text">LOG OUT</span></a>
+                        </div>
+                    </li>
+                <?php } else { ?>
                     <li class="nav-item">
-                    <a class="nav-link page-scroll" href="<?= base_url('auth_pelanggan')?>">LOGIN</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link page-scroll" href="<?= base_url('auth_pelanggan/registration')?>">REGISTRASI</a>
-                </li>
-                
+                        <a class="nav-link page-scroll" href="<?= base_url('auth_pelanggan') ?>">LOGIN</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link page-scroll" href="<?= base_url('auth_pelanggan/registration') ?>">REGISTRASI</a>
+                    </li>
+
             </ul>
-            <?php } ?>
-            <span class="fa-stack">
-                <a href="#your-link">
-                    <span class="hexagon"></span>
-                    <i class="fab fa-instagram fa-stack-1x"></i>
-                </a>
-            </span>
-            </span>
+        <?php } ?>
+        <span class="fa-stack">
+            <a href="#your-link">
+                <span class="hexagon"></span>
+                <i class="fab fa-instagram fa-stack-1x"></i>
+            </a>
+        </span>
+        </span>
         </div>
     </nav> <!-- end of navbar -->
     <!-- Custom fonts for this template-->

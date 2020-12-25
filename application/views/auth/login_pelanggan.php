@@ -4,18 +4,6 @@
         <div class="row">
             <div class="col-lg-6">
                 <div class="text-container">
-                    <?php if ($this->session->flashdata('flash')) : ?>
-                        <div class="row mt-3">
-                            <div class="alert alert-success alert-dismissible fade show" role="alert">Data
-                                Berhasil Ditambahkan<?= $this->session->flashdata('flash'); ?>.
-                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
-                            </div>
-                            <div class="col-md-6">
-                            </div>
-                        </div>
-                    <?php endif; ?>
                     <div class="section-title"></div>
                     <h2>LANSATRANS TRAVEL</h2>
                     <p>Lansa Trans merupakan jasa travel executive yang melayani rute
@@ -52,8 +40,10 @@
             </div> <!-- end of col -->
             <div class="col-lg-6">
 
+                <?= $this->session->flashdata('message'); ?>
+
                 <!-- Contact Form -->
-                <form class="user" method="post" action="<?= base_url('auth_pelanggan'); ?>">
+                <form class="pelanggan" method="post" action="<?= base_url('auth_pelanggan'); ?>">
                     <div class="form-group">
                         <input type="text" class="form-control form-control-input" id="pusername" name="pusername" placeholder="Enter username" value="<?= set_value('pusername'); ?>">
                         <?= form_error('pusername', '<small class="text-danger pl-3">', '</small>'); ?>

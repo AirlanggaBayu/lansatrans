@@ -31,7 +31,7 @@ class Auth_Pelanggan extends CI_Controller
         $username = $this->input->post('pusername');
         $password = $this->input->post('ppassword');
 
-        $pelanggan = $this->db->get_where('pelanggan', ['username_pelanggan' => $username], ['id_pelanggan' => $id])->row_array();
+        $pelanggan = $this->db->get_where('pelanggan', ['username_pelanggan' => $username])->row_array();
 
 
         //usernya ada
@@ -56,7 +56,7 @@ class Auth_Pelanggan extends CI_Controller
     public function registration()
     {
         $this->form_validation->set_rules('pnama', 'Pnama', 'required|trim');
-        $this->form_validation->set_rules('pphone', 'Pusername', 'required|trim');
+        $this->form_validation->set_rules('pphone', 'Pphone', 'required|trim');
         $this->form_validation->set_rules('pusername', 'Pusername', 'required|trim');
         $this->form_validation->set_rules('ppassword1', 'Ppassword', 'required|trim|min_length[8]|matches[ppassword2]', [
             'matches' => 'password dont matches!',

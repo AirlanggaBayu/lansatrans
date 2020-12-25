@@ -80,8 +80,8 @@
                 <!-- end of dropdown menu -->
                 <?php if ($this->session->userdata('username_pelanggan') != '') { ?>
                     <li class="nav-item">
-                    <a class="nav-link page-scroll" href="<?= base_url('pelanggan/reservasi') ?>">RESERVASI</a>
-                </li>
+                        <a class="nav-link page-scroll" href="<?= base_url('pelanggan/reservasi') ?>">RESERVASI</a>
+                    </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle page-scroll" href="#about" id="navbarDropdown" role="button" aria-haspopup="true" aria-expanded="false"><?= $this->session->userdata('username_pelanggan') ?></a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -115,6 +115,18 @@
     <header id="header" class="header">
         <div class="header-content">
             <div class="container">
+                <?php if ($this->session->flashdata('flash')) : ?>
+                    <div class="row ml-4 mt-3">
+                        <div class="alert alert-success alert-dismissible fade show" role="alert">Terima kasih atas kritik dan saran <?= $this->session->flashdata('flash'); ?>.
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+
+                        <div class="col-md-6">
+                        </div>
+                    </div>
+                <?php endif; ?>
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="text-container">
@@ -213,20 +225,25 @@
     <!-- Keluhan  -->
     <div id="contact" class="form-2">
         <div class="container">
-        <div class="section-title">KRITIK DAN SARAN</div>
+            <div class="section-title">KRITIK DAN SARAN</div>
             <div class="row">
                 <div class="col-lg-12">
-                    
+
                     <!-- Contact Form -->
-                    <form>
+                    <form action="<?php echo base_url('Pelanggan/Home/saran/'); ?>" method="post">
                         <div class="form-group">
-                            <input type="text" class="form-control-input" id="cname" required>
-                            <label class="label-control" for="cname">Name</label>
+                            <input type="text" class="form-control-input" name="pengirim" id="cname" required>
+                            <label class="label-control" for="cname">Nama*</label>
                             <div class="help-block with-errors"></div>
                         </div>
                         <div class="form-group">
-                            <textarea class="form-control-textarea" id="cmessage" required></textarea>
-                            <label class="label-control" for="cmessage">Your message</label>
+                            <textarea class="form-control-textarea" name="saran" id="cmessage" required></textarea>
+                            <label class="label-control" for="cmessage">Pesan Anda*</label>
+                            <div class="help-block with-errors"></div>
+                        </div>
+                        <div class="form-group">
+                            <input type="hidden" class="form-control-textarea" value="<?php echo date("Y-m-d"); ?>" name="tgl_diterima" id="cmessage" required></input>
+
                             <div class="help-block with-errors"></div>
                         </div>
                         <div class="form-group">

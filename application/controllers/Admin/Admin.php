@@ -101,6 +101,23 @@ class Admin extends CI_Controller
         }
         redirect('admin/admin/saran/');
     }
+
+    public function logout()
+    {
+        $this->session->sess_destroy('username');
+
+        $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Anda berhasil logged out!</div>');
+        redirect('auth');
+    }
+
+    function detail_saran($id_saran)
+    {
+        $data['saran'] = $this->crud->detail_data(['id_saran' => $id_saran], 'saran')->result();
+        $this->load->view('template_admin/header');
+        $this->load->view('template_admin/sidebar');
+        $this->load->view('Detail_saran', $data);
+        $this->load->view('template_admin/footer');
+    }
 }
 ?>
 <!-- Dibuat oleh dodhy -->

@@ -37,6 +37,7 @@ class Histori extends CI_Controller
     function bayarr()
     {
         $id_pemesanan = $this->input->post('id_pemesanan');
+        $tgl_bayar = $this->input->post('tgl_bayar');
         $foto = $_FILES['foto']['name'];
         if ($foto = '') {
         } else {
@@ -54,6 +55,7 @@ class Histori extends CI_Controller
 
         $data = array(
             'bukti' => $foto,
+            'tgl_bayar' => $tgl_bayar,
             'status_bayar' => 'Sedang Diproses'
         );
         $where = array(

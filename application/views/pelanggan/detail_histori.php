@@ -85,6 +85,9 @@
           <div class="form-group">
             <input readonly hidden type="text" class="form-control" id="nama" value="<?= $pemesanan[0]->id_pemesanan ?>" name="id_pemesanan">
           </div>
+          <div class="form-group">
+            <input readonly hidden type="text" class="form-control" id="nama" name="tgl_bayar" value="<?php echo date("Y-m-d"); ?>">
+          </div>
           <h6>Unggah Bukti Pembayaran</h6>
           <div class="custom-file">
             <input type="file" class="custom-file-input" id="customFile" name="foto">

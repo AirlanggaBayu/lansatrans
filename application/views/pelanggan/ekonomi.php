@@ -29,7 +29,6 @@
                       </tr>
                     </tbody>
                   </table>
-                  <button type="submit" class="btn btn-success col-12">PESAN</button>
                   
             </div>
             <?php }?>

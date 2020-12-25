@@ -104,11 +104,6 @@
                 <label class="label-control" for="harga_total">Alamat Jemput</label>
                 <div class="help-block with-errors"></div>
             </div>
-            <div class="form-group">
-                <input type="hidden" class="form-control-input" id="alamat" name="status_bayar" value="Belum Lunas"> </input>
-                <label class="label-control" for="harga_total">Alamat Jemput</label>
-                <div class="help-block with-errors"></div>
-            </div>
 
 
             <div class="form-group">

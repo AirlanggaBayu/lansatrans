@@ -43,7 +43,7 @@
 
                         <div class="col-sm-10">
                             <label for="merk">No. Telp*</label>
-                            <input type="text" class="form-control" id="no.telp" placeholder="Masukkan nama..." name="no_telp" autocomplete="off" required>
+                            <input type="text" class="form-control" id="no.telp" placeholder="Masukkan nomor telp..." name="no_telp" autocomplete="off" required>
                         </div>
 
 

@@ -65,10 +65,6 @@
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
                     <a class="nav-link page-scroll" href="<?= base_url('pelanggan/home') ?>">HOME </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link page-scroll" href="<?= base_url('pelanggan/home/rute_travel')?>">RUTE TRAVEL</a>
-                </li>
                 <!-- Dropdown Menu -->          
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle page-scroll" href="#about" id="navbarDropdown" role="button" aria-haspopup="true" aria-expanded="false">TARIF TRAVEL</a>

@@ -67,7 +67,7 @@
                 }
             </style>
 
-            <p class="right"> Jember, <?php echo date("Y-m-d"); ?> </p>
+            <p class="right"> Jember, <?php echo date("d-m-Y"); ?> </p>
 
         </div>
     </div>

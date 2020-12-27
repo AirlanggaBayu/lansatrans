@@ -12,6 +12,7 @@
         </div>
     <?php endif; ?>
     <h2 class="text-center mb-3">FORMULIR PEMESANAN</h2>
+    <h6 style="color : #828282;">*Jika pemesanan lebih dari 3 hubungi admin</h6>
     <div class="row">
         <div class="col-lg-8">
             <?php echo form_open_multipart('Pelanggan/Reservasi/tambah_data'); ?>

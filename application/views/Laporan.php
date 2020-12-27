@@ -61,6 +61,14 @@
                     <?php } ?>
                 </tbody>
             </table>
+            <style type="text/css">
+                .right {
+                    text-align: right;
+                }
+            </style>
+
+            <p class="right"> Jember, <?php echo date("Y-m-d"); ?> </p>
+
         </div>
     </div>
 </div>

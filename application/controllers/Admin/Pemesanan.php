@@ -161,4 +161,11 @@ class Pemesanan extends CI_Controller
 
 		$this->load->view('Laporan', $data);
 	}
+
+	function hapuspesanan($id_pemesanan)
+	{
+		$where = array('id_pemesanan' => $id_pemesanan);
+		$this->crud->hapus_data($where, 'pemesanan');
+		redirect('Admin/Pemesanan/index');
+	} //function ini digunakan untuk menghapus data yang dipilih pada halaman tutor
 }

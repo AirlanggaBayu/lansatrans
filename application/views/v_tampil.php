@@ -59,7 +59,7 @@
 
 								<a href="<?= base_url('Admin/pemesanan/halaman_detail/') . $p->id_pemesanan ?>" class="btn btn-sm btn-success"> <i class="fas fa-eye"></i></a>
 								<a href="<?= base_url('Admin/Pemesanan/halaman_ubah_bayar/') . $p->id_pemesanan ?>" class="btn btn-sm btn-primary"> <i class="fas fa-edit"></i></a>
-								<a href="<?= base_url('Admin/Mobil/hapusmobil/') ?>" class="btn btn-sm btn-danger"> <i class="fas fa-trash"></i></a>
+								<a href="<?= base_url('Admin/Pemesanan/hapuspesanan/') . $p->id_pemesanan  ?>" class="btn btn-sm btn-danger"> <i class="fas fa-trash"></i></a>
 
 
 							</td>
@@ -68,6 +68,8 @@
 					<?php } ?>
 				</tbody>
 			</table>
+
+
 		</div>
 	</div>
 </div>

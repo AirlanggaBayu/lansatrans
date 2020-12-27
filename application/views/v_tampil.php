@@ -7,33 +7,35 @@
 
 <body> -->
 
-	<!-- DataTales Example -->
-	<div class="card shadow mb-4">
-		<div class="card-header py-3">
-			<h6 class="m-0 font-weight-bold text-primary">Tabel Pemesanan</h6>
-		</div>
-		<div class="card-body">
+<!-- DataTales Example -->
+<div class="card shadow mb-4">
+	<div class="card-header py-3">
+		<h6 class="m-0 font-weight-bold text-primary">Tabel Pemesanan</h6>
+
+	</div>
+	<div class="card-body">
 		<a href="<?= base_url('Admin/Pemesanan/pesan'); ?>" class="btn btn-success btn-sm ml-4"> Tambah Pemesanan</a>
-			<div class="table-responsive mt-2">
-				<table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-					<thead>
-						<tr>
-							<th>No</th>
+		<a href="<?= base_url('Admin/Pemesanan/cetak'); ?>" class="btn btn-primary btn-sm ml-4"> Cetak Laporan</a>
+		<div class="table-responsive mt-2">
+			<table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+				<thead>
+					<tr>
+						<th>No</th>
 
 
-							<th>Kode Pesan</th>
-							<th>Nama</th>
-							<th>Jumlah</th>
+						<th>Kode Pesan</th>
+						<th>Nama</th>
+						<th>Jumlah</th>
 
-							<th>Tanggal Pesan</th>
-							<th>Tanggal Berangkat</th>
-							<th>Bukti</th>
-							<th>Pembayaran</th>
-							<th>Aksi</th>
+						<th>Tanggal Pesan</th>
+						<th>Tanggal Berangkat</th>
+						<th>Bukti</th>
+						<th>Pembayaran</th>
+						<th>Aksi</th>
 
-						</tr>
-					</thead>
-					<tbody>
+					</tr>
+				</thead>
+				<tbody>
 					<?php
 					$no = 1;
 					foreach ($pemesanan as $p) {
@@ -49,7 +51,7 @@
 							<td><?php echo $p->tgl_pesan ?></td>
 							<td><?php echo $p->tgl_berangkat ?></td>
 							<td>
-								<img src="<?= base_url('assets/bukti-bayar/') . $p->bukti ?>" width="60" height="60">
+								<img src="<?= base_url('assets/bukti-bayar/') . $p->bukti ?>" width="60" height="60" class="zoom">
 							</td>
 							<td><?php echo $p->status_bayar ?></td>
 
@@ -64,11 +66,11 @@
 						</tr>
 
 					<?php } ?>
-					</tbody>
-				</table>
-					</div>
-				</div>
-			</div>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>
 <!-- 
 </body>
 

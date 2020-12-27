@@ -23,7 +23,7 @@
                 <div class="help-block with-errors"></div>
             </div>
             <div class="form-group">
-                <input type="text" class="form-control-input" value="<?= $pelanggan['username_pelanggan']; ?>" name="username_pelanggan" readonly>
+                <input type="hidden" class="form-control-input" value="<?= $pelanggan['username_pelanggan']; ?>" name="username_pelanggan" readonly>
 
                 <div class="help-block with-errors"></div>
             </div>
@@ -38,12 +38,12 @@
             </div>
 
             <div class="form-group">
-                <input type="text" class="form-control-input" id="nama_pelanggan" name="nama_pelanggan" required>
+                <input type="text" class="form-control-input" id="nama_pelanggan" name="nama_pelanggan" autocomplete="off" required>
                 <label class="label-control" for="nama_pelanggan">Nama*</label>
                 <div class="help-block with-errors"></div>
             </div>
             <div class="form-group">
-                <input type="text" class="form-control-input" id="no_telp" name="no_telp" required>
+                <input type="text" class="form-control-input" autocomplete="off" id="no_telp" name="no_telp" required>
                 <label class="label-control" for="nama_pelanggan">No. Telepon*</label>
                 <div class="help-block with-errors"></div>
             </div>
@@ -74,7 +74,7 @@
                 </div>
             </div>
             <div class="form-group">
-                <input type="number" class="form-control-input" id="jumlah" name="jumlah" placeholder="Jumlah" required />
+                <input type="number" min="1" max="3" class="form-control-input" id="jumlah" name="jumlah" placeholder="Jumlah" required />
                 <div class="help-block with-errors"></div>
             </div>
             <div class="form-group">
@@ -94,6 +94,10 @@
             </div>
             <div class="form-group">
                 <input type="hidden" value="<?php echo date("Y-m-d"); ?>" class="form-control-input" readonly id="tgl_pesan" name="tgl_pesan" required>
+                <div class="help-block with-errors"></div>
+            </div>
+            <div class="form-group">
+                <input type="hidden" value="Berlum Lunas" class="form-control-input" readonly id="tgl_pesan" name="status_bayar" required>
                 <div class="help-block with-errors"></div>
             </div>
             <div class="form-group">

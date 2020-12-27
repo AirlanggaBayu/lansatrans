@@ -62,6 +62,11 @@
           <label for=""><strong> Mobil Pengganti </strong></label>
           <p class="card-text"><?= $pemesanan[0]->mobil_pengganti ?></p>
         </div>
+        <div class="col-lg-6">
+          <label for=""><strong> No Rek Transfer </strong></label>
+          <p class="card-text">BCA 021544879584 a/n Khunika Maulana</p>
+
+        </div>
       </div>
     </div>
     <button type="button" class="btn btn-primary mb-2" data-toggle="modal" data-target="#unggah">Unggah Bukti Pembayaran</button>

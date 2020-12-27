@@ -154,4 +154,11 @@ class Pemesanan extends CI_Controller
 		$this->load->view('Detailpesan', $data);
 		$this->load->view('template_admin/footer');
 	}
+
+	function cetak()
+	{
+		$data['pemesanan'] = $this->crud->tampil_data('pemesanan');
+
+		$this->load->view('Laporan', $data);
+	}
 }

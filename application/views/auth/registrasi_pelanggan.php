@@ -30,15 +30,15 @@
                 <!-- Call Me Form -->
                 <form method="POST" action="<?= base_url('auth_pelanggan/registration') ?>">
                     <div class="form-group">
-                        <input type="text" class="form-control form-control-input" id="pnama" name="pnama" placeholder="Nama lengkap" value="<?= set_value('pnama'); ?>">
+                        <input type="text" class="form-control form-control-input" id="pnama" name="pnama" placeholder="Nama lengkap" autocomplete="off" value="<?= set_value('pnama'); ?>">
                         <?= form_error('pnama', '<small class="text-danger pl-3">', '</small>'); ?>
                     </div>
                     <div class="form-group">
-                        <input type="text" class="form-control form-control-input" id="pphone" name="pphone" placeholder="Telepon" value="<?= set_value('pphone'); ?>">
+                        <input type="text" class="form-control form-control-input" id="pphone" name="pphone" placeholder="Telepon" autocomplete="off" value="<?= set_value('pphone'); ?>">
                         <?= form_error('pphone', '<small class="text-danger pl-3">', '</small>'); ?>
                     </div>
                     <div class="form-group">
-                        <input type="text" class="form-control form-control-input" id="pusername" name="pusername" placeholder="Username" value="<?= set_value('pusername'); ?>">
+                        <input type="text" class="form-control form-control-input" id="pusername" name="pusername" autocomplete="off" placeholder="Username" value="<?= set_value('pusername'); ?>">
                         <?= form_error('pusername', '<small class="text-danger pl-3">', '</small>'); ?>
                     </div>
                     <div class="form-group">
@@ -57,7 +57,7 @@
                 </form>
                 <hr>
                 <div class="text-center">
-                    <a class="small" href="<?= base_url('auth_pelanggan'); ?>">Already have an account? Login!</a>
+                    <a class="small" href="<?= base_url('auth_pelanggan'); ?>">Sudah punya akun? Login!</a>
                 </div>
                 <!-- end of call me form -->
 

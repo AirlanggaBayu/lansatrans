@@ -45,7 +45,7 @@
                 <!-- Contact Form -->
                 <form class="pelanggan" method="post" action="<?= base_url('auth_pelanggan'); ?>">
                     <div class="form-group">
-                        <input type="text" class="form-control form-control-input" id="pusername" name="pusername" placeholder="Enter username" value="<?= set_value('pusername'); ?>">
+                        <input type="text" class="form-control form-control-input" id="pusername" name="pusername" placeholder="Enter username" autocomplete="off" value="<?= set_value('pusername'); ?>">
                         <?= form_error('pusername', '<small class="text-danger pl-3">', '</small>'); ?>
                     </div>
                     <div class="form-group">
@@ -58,7 +58,7 @@
                 </form>
                 <hr>
                 <div class="text-center">
-                    <a class="small" href="<?= base_url('auth_pelanggan/registration'); ?>">Create an Account!</a>
+                    <a class="small" href="<?= base_url('auth_pelanggan/registration'); ?>">Buat akun baru</a>
                 </div>
                 <!-- end of contact form -->
 

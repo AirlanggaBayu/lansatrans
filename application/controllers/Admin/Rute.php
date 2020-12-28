@@ -57,10 +57,14 @@ class Rute extends CI_Controller
         $id = $this->input->post('id_rute');
         $rute = $this->input->post('rute');
         $waktu = $this->input->post('jam');
+        $kelas = $this->input->post('kelas');
+        $harga = $this->input->post('harga');
 
         $where = array('id_rute' => $id); // mengubah id menjadi bentuk array
         $data = array(
             'rute' => $rute,
+            'kelas' => $kelas,
+            'harga' => $harga,
             'jam' => $waktu
         );
         $this->crud->ubah_data($where, $data, 'rute'); //perintah untuk mengupdate data

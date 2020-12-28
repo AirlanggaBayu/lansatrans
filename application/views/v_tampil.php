@@ -73,6 +73,17 @@
 		</div>
 	</div>
 </div>
+
+
+<script>
+$(document).ready(function(){
+    $('.zoom').hover(function() {
+        $(this).addClass('transisi');
+    }, function() {
+        $(this).removeClass('transisi');
+    });
+});  
+</script>
 <!-- 
 </body>
 

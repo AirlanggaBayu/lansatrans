@@ -8,7 +8,7 @@
     <div class="card shadow mb-4">
                 <div class="card-body">
                 <form action="<?php echo base_url('admin/rute/edit_data/'.$r->id_rute); ?>" method="post">
-                    <input type="text"  readonly value="<?=$r->id_rute ?>" name="id_rute" class="form-control">
+                    <input type="text" hidden readonly value="<?=$r->id_rute ?>" name="id_rute" class="form-control">
                         <h6>Nama Rute</h6>
                         <input type="text" class="form-control form-control-user" id="exampleInputEmail" 
                         aria-describedby="emailHelp" placeholder="Masukkan Rute disini" name="rute" value="<?=$r->rute?>">
